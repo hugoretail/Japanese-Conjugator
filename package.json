@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "kamiya-codec": "^4.11.0",
+    "wanakana": "^5.3.1"
+  }
+}

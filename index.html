@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://unpkg.com/wanakana"></script>
 </head>
 <body>
     <header>
@@ -32,14 +33,14 @@
         <div id="main-elements">
             <div>
                 <div id="japan-flag">
-                    <svg width="100" height="100">
-                        <circle cx="50" cy="50" r="30" fill="rgb(188, 0, 45)" />
+                    <svg width="100" height="50">
+                        <circle cx="50" cy="-10" r="30" fill="rgb(188, 0, 45)" />
                     </svg>
                 </div>
             </div>
             <div id="verb-conjugation">
                 <div id="verb-properties">
-                    <span data-tooltip="Neutral ー Polite ー Honorific">Style</span>
+                    <span data-tooltip="Plain ー Polite ー Honorific">Style</span>
                     <span data-tooltip="Positive ー Negative">Affirmation</span>
                     <span data-tooltip="Past ー Present/Future">Time Form</span>
                 </div>
@@ -47,7 +48,7 @@
                     <span>動詞</span>
                 </div>
                 <div id="user-guess">
-                    <input placeholder="Your answer..."></input>
+                    <input id="guess-input" placeholder="Your answer..."></input>
                 </div>
             </div>
 
@@ -119,5 +120,7 @@
     </footer>
 
     <script src="./js/animationScripts.js"></script>
+    <script src="./js/keyboardScript.js"></script>
+    <script src="./js/conjugationScript.js" type="module"></script>
 </body>
 </html>
