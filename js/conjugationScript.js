@@ -1,6 +1,6 @@
 import * as codec from "../node_modules/kamiya-codec/dist/kamiya.min.mjs";
 
-console.log(codec.conjugateAuxiliaries("する", ["Tai"], "Negative"));
+console.log(codec.conjugateAuxiliaries("たべる", ["Tai"], "Negative"));
 
 // constant values
 
@@ -12,6 +12,30 @@ let filters = null;
 // elements
 
 // functions
+const getVerb = () => {
+    // get all verbs from the concerned JLPT levels
+    const filteredVerbs = verbs.filter(verb => filters.JLPT.includes(verb.JLPT));
+
+    // get a random verb
+    const randomIndex = Math.floor(Math.random() * filteredVerbs.length);
+    const randomVerb = filteredVerbs[randomIndex];
+
+    console.log("Selected verb: ", randomVerb);
+    return randomVerb;
+};
+
+const getAdjective = () => {
+    // get all adjectives from the concerned JLPT levels
+    const filteredAdjectives = adjectives.filter(adjective => filters.JLPT.includes(adjective.JLPT));
+
+    // get a random adjective
+    const randomIndex = Math.floor(Math.random() * filteredAdjectives.length);
+    const randomAdjective = filteredAdjectives[randomIndex];
+
+    console.log("Selected adjective: ", randomAdjective);
+    return randomAdjective;
+};
+
 const getFilters = () => {
     let filters = {
         JLPT: [],
@@ -48,16 +72,25 @@ const getFilters = () => {
 };
 
 const newRound = () => {
-    const random = Math.floor(Math.random() * 2);
+    const random = Math.floor(Math.random() * 4);
     filters = getFilters();
     console.log(filters);
-    if (random == 0) {
-        // Verb
-
+    if (random < 3) {
+        // Verb 75% chance
+        let theChoosenVerb = getVerb();
+        // Define ~X
     } else {
-        // Adjective
-
+        // Adjective 25% chance
+        let theChoosenAdjective = getAdjective();
+        // い or な
     }
+
+    // define style
+    // define affirmation
+    // define time
+
+    // display everything
+    // store expected answer
 };
 
 const loadCSV = async (csvFile) => {
@@ -94,10 +127,10 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
     // Get the csv values
     verbs = await loadCSV('../csv/verbs.csv');
-    console.log("Verbs loaded : ", verbs);
+    console.log("Verbs loaded: ", verbs);
 
     adjectives = await loadCSV('../csv/adjectives.csv');
-    console.log("Adjectives loaded : ", adjectives);
+    console.log("Adjectives loaded: ", adjectives);
 
     newRound();
 });
