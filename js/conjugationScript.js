@@ -17,8 +17,12 @@ const getVerb = () => {
     const filteredVerbs = verbs.filter(verb => filters.JLPT.includes(verb.JLPT));
 
     // get a random verb
-    const randomIndex = Math.floor(Math.random() * filteredVerbs.length);
-    const randomVerb = filteredVerbs[randomIndex];
+    let randomVerb = null;
+    let randomIndex = null;
+    while (randomVerb == null || randomVerb == 'None') {
+        randomIndex = Math.floor(Math.random() * filteredVerbs.length);
+        randomVerb = filteredVerbs[randomIndex];
+    }
 
     console.log("Selected verb: ", randomVerb);
     return randomVerb;
@@ -29,8 +33,12 @@ const getAdjective = () => {
     const filteredAdjectives = adjectives.filter(adjective => filters.JLPT.includes(adjective.JLPT));
 
     // get a random adjective
-    const randomIndex = Math.floor(Math.random() * filteredAdjectives.length);
-    const randomAdjective = filteredAdjectives[randomIndex];
+    let randomAdjective = null;
+    let randomIndex = null;
+    while (randomAdjective == null || randomAdjective == 'None') {
+        randomIndex = Math.floor(Math.random() * filteredAdjectives.length);
+        randomAdjective = filteredAdjectives[randomIndex];
+    }
 
     console.log("Selected adjective: ", randomAdjective);
     return randomAdjective;
@@ -41,6 +49,7 @@ const getFilters = () => {
         JLPT: [],
         Affirmation: [],
         Time: [],
+        Style: [],
         XForms: []
     };
 
@@ -53,15 +62,29 @@ const getFilters = () => {
             if (checkbox.checked) {
                 const labelText = checkbox.parentNode.textContent.trim();
 
-                if (labelText.includes('N5') || labelText.includes('N4') || labelText.includes('N3') ||
-                    labelText.includes('N2') || labelText.includes('N1')) {
+                if (labelText.includes('N5')
+                    || labelText.includes('N4')
+                    || labelText.includes('N3')
+                    || labelText.includes('N2')
+                    || labelText.includes('N1')
+                    || labelText.includes('Others')) {
                     filters.JLPT.push(labelText);
-                } else if (labelText.includes('Positive') || labelText.includes('Negative')) {
+
+                } else if (labelText.includes('Positive')
+                    || labelText.includes('Negative')
+                    || labelText.includes('Progressive')) {
                     filters.Affirmation.push(labelText);
-                } else if (labelText.includes('Past') || labelText.includes('Present/Future')) {
+
+                } else if (labelText.includes('Past')
+                    || labelText.includes('Present/Future')) {
                     filters.Time.push(labelText);
-                } else if (labelText.includes('～て') || labelText.includes('Plain') ||
-                    labelText.includes('Polite')) {
+
+                } else if (labelText.includes('Honorific')
+                    || labelText.includes('Plain')
+                    || labelText.includes('Polite')) {
+                    filters.Style.push(labelText);
+
+                } else if (labelText.includes('～て')) {
                     filters.XForms.push(labelText);
                 }
             }
@@ -89,8 +112,8 @@ const newRound = () => {
     // define affirmation
     // define time
 
-    // display everything
-    // store expected answer
+    // display everything (check if furigana option is ON or OFF)
+    // store expected answer (hiragana reading)
 };
 
 const loadCSV = async (csvFile) => {
