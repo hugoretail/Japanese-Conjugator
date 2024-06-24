@@ -42,13 +42,14 @@
                 <div id="verb-properties">
                     <span data-tooltip="Plain ー Polite ー Honorific">Style</span>
                     <span data-tooltip="Positive ー Negative">Affirmation</span>
-                    <span data-tooltip="Past ー Present/Future">Time Form</span>
+                    <span data-tooltip="Past ー Present/Future">Time</span>
+                    <span data-tooltip="～て ー ～たら ー ～しまう ー ...">～X</span>
                 </div>
                 <div id="the-verb">
                     <span>動詞</span>
                 </div>
                 <div id="user-guess">
-                    <input id="guess-input" placeholder="Your answer..."></input>
+                    <input id="guess-input" placeholder=""></input>
                 </div>
             </div>
 
@@ -64,38 +65,54 @@
                         <span class="slider-switch"></span>
                     </label>
                 </div>
-                <table class="options-table">
+                <table class="options-table">  <!-- EACH DISABLED CHECKBOX IS 'TO DO' -->
                     <tr>
-                        <td><input type="checkbox" checked> Checkbox 11</td>
-                        <td><input type="checkbox" checked> Checkbox 21</td>
-                        <td><input type="checkbox" checked> Checkbox 31</td>
-                        <td><input type="checkbox" checked> Checkbox 41</td>
-                        <td><input type="checkbox" checked> Checkbox 51</td>
-                        <td><input type="checkbox" checked> Checkbox 61</td>
+                        <td><input type="checkbox" checked> N5</td>
+                        <td><input type="checkbox" checked> Positive</td>
+                        <td><input type="checkbox" checked> ～て</td>
+                        <td><input type="checkbox" disabled> Conditional</td>
+                        <td><input type="checkbox" checked> Plain</td>
+                        <td><input type="checkbox" disabled> Imperative</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox"> Checkbox 12</td>
-                        <td><input type="checkbox"> Checkbox 22</td>
-                        <td><input type="checkbox"> Checkbox 32</td>
-                        <td><input type="checkbox"> Checkbox 42</td>
-                        <td><input type="checkbox"> Checkbox 52</td>
-                        <td><input type="checkbox"> Checkbox 62</td>
+                        <td><input type="checkbox" checked> N4</td>
+                        <td><input type="checkbox" checked> Negative</td>
+                        <td><input type="checkbox" disabled> ～たら</td>
+                        <td><input type="checkbox" disabled> Volitional</td>
+                        <td><input type="checkbox" checked> Polite</td>
+                        <td><input type="checkbox" disabled> Causative</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" checked> Checkbox 13</td>
-                        <td><input type="checkbox" checked> Checkbox 23</td>
-                        <td><input type="checkbox" checked> Checkbox 33</td>
-                        <td><input type="checkbox" checked> Checkbox 43</td>
-                        <td><input type="checkbox" checked> Checkbox 53</td>
-                        <td><input type="checkbox" checked> Checkbox 63</td>
+                        <td><input type="checkbox" disabled> N3</td>
+                        <td><input type="checkbox" checked> Past</td>
+                        <td><input type="checkbox" disabled> ～たり</td>
+                        <td><input type="checkbox" disabled> Potential</td>
+                        <td><input type="checkbox" disabled> Honorific</td>
+                        <td><input type="checkbox" disabled> Passive</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox"> Checkbox 14</td>
-                        <td><input type="checkbox"> Checkbox 24</td>
-                        <td><input type="checkbox"> Checkbox 34</td>
-                        <td><input type="checkbox"> Checkbox 44</td>
-                        <td><input type="checkbox"> Checkbox 54</td>
-                        <td><input type="checkbox"> Checkbox 64</td>
+                        <td><input type="checkbox" disabled> N2</td>
+                        <td><input type="checkbox" checked> Present/Future</td>
+                        <td><input type="checkbox" disabled> ～ず</td>
+                        <td><input type="checkbox" disabled> </td>
+                        <td><input type="checkbox" disabled> </td>
+                        <td><input type="checkbox" disabled> Causative Passive</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" disabled> N1</td>
+                        <td><input type="checkbox" disabled> Progressive</td>
+                        <td><input type="checkbox" disabled> ～たい</td>
+                        <td><input type="checkbox" disabled> </td>
+                        <td><input type="checkbox" disabled> </td>
+                        <td><input type="checkbox" disabled> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" disabled> </td>
+                        <td><input type="checkbox" disabled> </td>
+                        <td><input type="checkbox" disabled> ～しまう</td>
+                        <td><input type="checkbox" disabled> </td>
+                        <td><input type="checkbox" disabled> </td>
+                        <td><input type="checkbox" disabled> </td>
                     </tr>
                 </table>
             </div>
