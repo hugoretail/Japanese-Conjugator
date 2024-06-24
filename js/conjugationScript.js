@@ -1,6 +1,7 @@
 import * as codec from "../node_modules/kamiya-codec/dist/kamiya.min.mjs";
 
-console.log(codec.conjugateAuxiliaries("たべる", ["Tai"], "Negative"));
+console.log(codec.conjugate("むすぶ", "Ta"  , false));
+console.log(codec.conjugateAuxiliaries("たべる", ["Masu"], "Te", "True"));
 
 // constant values
 
@@ -8,6 +9,7 @@ console.log(codec.conjugateAuxiliaries("たべる", ["Tai"], "Negative"));
 let verbs = null; // the verbs csv content
 let adjectives = null; // the adjectives csv content
 let filters = null;
+let currentVerbReading = null; // the current verb good answer
 
 // elements
 
@@ -24,7 +26,6 @@ const getVerb = () => {
         randomVerb = filteredVerbs[randomIndex];
     }
 
-    console.log("Selected verb: ", randomVerb);
     return randomVerb;
 };
 
@@ -47,10 +48,8 @@ const getAdjective = () => {
 const getFilters = () => {
     let filters = {
         JLPT: [],
-        Affirmation: [],
-        Time: [],
-        Style: [],
-        XForms: []
+        Conjugation: [],
+        Auxiliary: []
     };
 
     const tableRows = document.querySelectorAll('.options-table tr');
@@ -70,28 +69,54 @@ const getFilters = () => {
                     || labelText.includes('Others')) {
                     filters.JLPT.push(labelText);
 
-                } else if (labelText.includes('Positive')
-                    || labelText.includes('Negative')
-                    || labelText.includes('Progressive')) {
-                    filters.Affirmation.push(labelText);
+                } else if (labelText.includes('Affirmative')
+                    || labelText.includes('Negative')) {
+                    filters.Conjugation.push(labelText);
 
                 } else if (labelText.includes('Past')
                     || labelText.includes('Present/Future')) {
-                    filters.Time.push(labelText);
+                    filters.Conjugation.push(labelText);
 
-                } else if (labelText.includes('Honorific')
-                    || labelText.includes('Plain')
+                } else if (labelText.includes('Plain')
                     || labelText.includes('Polite')) {
-                    filters.Style.push(labelText);
+                    filters.Auxiliary.push(labelText);
 
                 } else if (labelText.includes('～て')) {
-                    filters.XForms.push(labelText);
+                    filters.Conjugation.push(labelText);
                 }
             }
         });
     });
 
     return filters;
+};
+
+const updateDisplay = () => {
+    // TO DO
+};
+
+const treatConjugation = (choosenConjugation) => {
+    switch (choosenConjugation) {
+        case 'Affirmative':
+            return "Dictionary";
+        case 'Negative':
+            return "Negative";
+        case 'Past':
+            return "Ta";
+        case 'Present/Future':
+            return "Dictionary";
+        case '～て':
+            return "Te";
+    }
+};
+
+const treatAuxiliaries = (choosenAuxiliaries) => {
+    switch (choosenAuxiliaries[0]) {
+        case 'Plain':
+            return [];
+        case 'Polite':
+            return ["Masu"];
+    }
 };
 
 const newRound = () => {
@@ -101,7 +126,43 @@ const newRound = () => {
     if (random < 3) {
         // Verb 75% chance
         let theChoosenVerb = getVerb();
-        // Define ~X
+
+        // UTILISER la variable filters
+        const randomConjugation = Math.floor(Math.random() * filters["Conjugation"].length);
+        let choosenConjugation = filters["Conjugation"][randomConjugation];
+        console.log("Choosen one: ", choosenConjugation);
+        let treatedConjugation = treatConjugation(choosenConjugation);
+
+        const randomAuxiliary = Math.floor(Math.random() * filters["Auxiliary"].length);
+        let choosenAuxiliaries = [filters["Auxiliary"][randomAuxiliary]];
+
+        if (choosenAuxiliaries[0] != "Masu" && filters["Auxiliary"].includes("Polite")) {
+            const politeCoinflip = Math.floor(Math.random() * 3);
+            if (politeCoinflip == 1) {
+                choosenAuxiliaries.push("Masu");
+            }
+        }
+        let treatedAuxiliaries = treatAuxiliaries(choosenAuxiliaries);
+
+        const randomAuxiliaries = Math.floor(Math.random() * 2); // coinflip
+        if (randomAuxiliaries == 1 && treatAuxiliaries.length > 0) {
+            treatedAuxiliaries = [];
+        }
+        if (treatedConjugation == 'Dictionary' && treatedAuxiliaries.length == 0) {
+            treatedAuxiliaries.push("Masu");
+        }
+
+        console.log("The verb: ", theChoosenVerb);
+        console.log("The conjugation: ", treatedConjugation);
+        console.log("The auxiliary(-ies): ", treatedAuxiliaries);
+
+        console.log(theChoosenVerb["Hiragana"]);
+        currentVerbReading = codec.conjugateAuxiliaries(theChoosenVerb["Hiragana"],
+            treatedAuxiliaries, treatedConjugation, theChoosenVerb["typeII"]); // conjugate
+        console.log(currentVerbReading);
+
+        updateDisplay();
+
     } else {
         // Adjective 25% chance
         let theChoosenAdjective = getAdjective();
