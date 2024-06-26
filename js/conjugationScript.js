@@ -9,11 +9,21 @@ console.log(codec.conjugateAuxiliaries("たべる", ["Masu"], "Te", "True"));
 let verbs = null; // the verbs csv content
 let adjectives = null; // the adjectives csv content
 let filters = null;
-let currentVerbReading = null; // the current verb good answer
+let expectedAnswer = null; // the current verb good answer
 
 // elements
 
 // functions
+const updateExpectedAnswer = (isVerb) => {
+    // UTILISER 'expectedAnswer', on prend toujours expectedAnswer[0] sauf si length > 1 (donc cas particuliers)
+    if (isVerb) {
+        // TO DO
+        // Vérifier ceci: normalement, 'filters' contient des infos. Si 'Conjugation' == 'Negative', alors il faut prendre la deuxième valeur
+    } else {
+        // TO DO
+    }
+}
+
 const getVerb = () => {
     // get all verbs from the concerned JLPT levels
     const filteredVerbs = verbs.filter(verb => filters.JLPT.includes(verb.JLPT));
@@ -91,8 +101,10 @@ const getFilters = () => {
     return filters;
 };
 
-const updateDisplay = () => {
+const updateVerbDisplay = (filters, theVerb) => {
     // TO DO
+
+    
 };
 
 const treatConjugation = (choosenConjugation) => {
@@ -121,16 +133,16 @@ const treatAuxiliaries = (choosenAuxiliaries) => {
 
 const newRound = () => {
     const random = Math.floor(Math.random() * 4);
+    const isVerb = random < 3;
     filters = getFilters();
     console.log(filters);
-    if (random < 3) {
+    if (isVerb) {
         // Verb 75% chance
         let theChoosenVerb = getVerb();
 
         // UTILISER la variable filters
         const randomConjugation = Math.floor(Math.random() * filters["Conjugation"].length);
         let choosenConjugation = filters["Conjugation"][randomConjugation];
-        console.log("Choosen one: ", choosenConjugation);
         let treatedConjugation = treatConjugation(choosenConjugation);
 
         const randomAuxiliary = Math.floor(Math.random() * filters["Auxiliary"].length);
@@ -157,11 +169,11 @@ const newRound = () => {
         console.log("The auxiliary(-ies): ", treatedAuxiliaries);
 
         console.log(theChoosenVerb["Hiragana"]);
-        currentVerbReading = codec.conjugateAuxiliaries(theChoosenVerb["Hiragana"],
+        expectedAnswer = codec.conjugateAuxiliaries(theChoosenVerb["Hiragana"],
             treatedAuxiliaries, treatedConjugation, theChoosenVerb["typeII"]); // conjugate
-        console.log(currentVerbReading);
+        console.log(expectedAnswer);
 
-        updateDisplay();
+        updateVerbDisplay();
 
     } else {
         // Adjective 25% chance
@@ -175,6 +187,7 @@ const newRound = () => {
 
     // display everything (check if furigana option is ON or OFF)
     // store expected answer (hiragana reading)
+    updateExpectedAnswer(isVerb, expectedAnswer);
 };
 
 const loadCSV = async (csvFile) => {

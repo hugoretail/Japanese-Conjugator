@@ -71,7 +71,6 @@ Index,Dictionary,Hiragana,JLPT,typeII
 70,終わる,おわる,N5,true
 71,泳ぐ,およぐ,N5,true
 72,咲く,さく,N5,true
-73,散歩,さんぽ,N5,true
 74,差す,さす,N5,true
 75,閉まる,しまる,N5,true
 76,閉める,しめる,N5,true
@@ -116,7 +115,6 @@ Index,Dictionary,Hiragana,JLPT,typeII
 115,降り出す,ふりだす,N4,true
 116,太る,ふとる,N4,true
 117,原因をつける,げんいんをつける,N4,true
-118,None,None,N4,false
 119,ご覧になる,ごらんになる,N4,true
 120,運ぶ,はこぶ,N4,true
 121,払う,はらう,N4,true
@@ -136,11 +134,9 @@ Index,Dictionary,Hiragana,JLPT,typeII
 135,致す,いたす,N4,true
 136,変える,かえる,N4,true
 137,会議を開く,かいぎをひらく,N4,true
-138,None,None,N4,false
 139,構わない,かまわない,N4,true
 140,噛む,かむ,N4,true
 141,考える,かんがえる,N4,true
-142,None,None,N4,false
 143,片付ける,かたづける,N4,true
 144,勝つ,かつ,N4,true
 145,乾く,かわく,N4,true
@@ -228,7 +224,7 @@ Index,Dictionary,Hiragana,JLPT,typeII
 227,訪ねる,たずねる,N4,true
 228,手伝う,てつだう,N4,true
 229,届ける,とどける,N4,true
-230,泊まる,とまる,N4,true
+230,泊まる,とまる,N4,false
 231,止める,とめる,N4,true
 232,通る,とおる,N4,true
 233,取り替える,とりかえる,N4,true
