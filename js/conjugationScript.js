@@ -4,6 +4,7 @@ console.log(codec.conjugate("むすぶ", "Ta"  , false));
 console.log(codec.conjugateAuxiliaries("たべる", ["Masu"], "Te", "True"));
 
 // constant values
+const inputElement = document.getElementById('guess-input');
 
 // variables
 let verbs = null; // the verbs csv content
@@ -59,7 +60,8 @@ const getFilters = () => {
     let filters = {
         JLPT: [],
         Conjugation: [],
-        Auxiliary: []
+        Auxiliary: [],
+        Adjective: [] // can contain い, な, both or nothing
     };
 
     const tableRows = document.querySelectorAll('.options-table tr');
@@ -104,7 +106,10 @@ const getFilters = () => {
 const updateVerbDisplay = (filters, theVerb) => {
     // TO DO
 
-    
+};
+
+const updateAdjectiveDisplay = (filters, theAdjective) => {
+    // TO DO
 };
 
 const treatConjugation = (choosenConjugation) => {
@@ -132,10 +137,11 @@ const treatAuxiliaries = (choosenAuxiliaries) => {
 };
 
 const newRound = () => {
-    const random = Math.floor(Math.random() * 4);
-    const isVerb = random < 3;
+    const isVerb = Math.floor(Math.random() * 4)
+    
     filters = getFilters();
     console.log(filters);
+    
     if (isVerb) {
         // Verb 75% chance
         let theChoosenVerb = getVerb();
@@ -149,7 +155,7 @@ const newRound = () => {
         let choosenAuxiliaries = [filters["Auxiliary"][randomAuxiliary]];
 
         if (choosenAuxiliaries[0] != "Masu" && filters["Auxiliary"].includes("Polite")) {
-            const politeCoinflip = Math.floor(Math.random() * 3);
+            const politeCoinflip = Math.floor(Math.random() * 4);
             if (politeCoinflip == 1) {
                 choosenAuxiliaries.push("Masu");
             }
@@ -173,19 +179,20 @@ const newRound = () => {
             treatedAuxiliaries, treatedConjugation, theChoosenVerb["typeII"]); // conjugate
         console.log(expectedAnswer);
 
-        updateVerbDisplay();
+        updateVerbDisplay(); // TO DO
 
     } else {
         // Adjective 25% chance
         let theChoosenAdjective = getAdjective();
-        // い or な
+
+        // TO DO (which conjugation essentially, it's easy now)
+
+        expectedAnswer = codec.adjConjugate(theChoosenAdjective["Hiragana"],
+            treatedConjugation, theChoosenAdjective["iAdjective"]);
+
+        updateAdjectiveDisplay(); // TO DO
     }
 
-    // define style
-    // define affirmation
-    // define time
-
-    // display everything (check if furigana option is ON or OFF)
     // store expected answer (hiragana reading)
     updateExpectedAnswer(isVerb, expectedAnswer);
 };
@@ -230,4 +237,14 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     console.log("Adjectives loaded: ", adjectives);
 
     newRound();
+});
+
+inputElement.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        if (inputElement.value.trim() === '') {
+            console.log('vide'); // TO DO
+        } else {
+            console.log('pas vide'); // TO DO
+        }
+    }
 });

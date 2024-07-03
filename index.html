@@ -68,6 +68,7 @@
                 <table class="options-table">  <!-- EACH DISABLED CHECKBOX IS 'TO DO' -->
                     <tr>
                         <td style="text-align: center;"><span>JLPT</span></td>
+                        <td style="text-align: center;"><span>Adjectives (*)</span></td>
                         <td style="text-align: center;"><span>Affirmative</span></td>
                         <td style="text-align: center;"><span>～X</span></td>
                         <td style="text-align: center;"><span>～al</span></td>
@@ -76,6 +77,7 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" checked> N5</td>
+                        <td><input type="checkbox" disabled> ～い</td>
                         <td><input type="checkbox" checked> Affirmative</td>
                         <td><input type="checkbox" checked> ～て</td>
                         <td><input type="checkbox" disabled> Conditional</td>
@@ -84,6 +86,7 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" checked> N4</td>
+                        <td><input type="checkbox" disabled> ～な</td>
                         <td><input type="checkbox" checked> Negative</td>
                         <td><input type="checkbox" disabled> ～たら</td>
                         <td><input type="checkbox" disabled> Volitional</td>
@@ -92,6 +95,7 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" disabled> N3</td>
+                        <td><input type="checkbox" disabled> Negative</td>
                         <td><input type="checkbox" checked> Past</td>
                         <td><input type="checkbox" disabled> ～たり</td>
                         <td><input type="checkbox" disabled> Potential</td>
@@ -100,6 +104,7 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" disabled> N2</td>
+                        <td><input type="checkbox" disabled> Past</td>
                         <td><input type="checkbox" checked> Present/Future</td>
                         <td><input type="checkbox" disabled> ～ず</td>
                         <td><input type="checkbox" disabled> </td>
@@ -108,6 +113,7 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" disabled> N1</td>
+                        <td><input type="checkbox" disabled> ～て</td>
                         <td><input type="checkbox" disabled> Progressive</td>
                         <td><input type="checkbox" disabled> ～たい</td>
                         <td><input type="checkbox" disabled> </td>
@@ -116,6 +122,7 @@
                     </tr>
                     <tr>
                         <td><input type="checkbox" disabled> Others</td>
+                        <td><input type="checkbox" disabled> Adverbial</td>
                         <td><input type="checkbox" checked> Furigana</td>
                         <td><input type="checkbox" disabled> ～しまう</td>
                         <td><input type="checkbox" disabled> </td>
@@ -124,8 +131,11 @@
                     </tr>
                 </table>
             </div>
+            <div>
+                <span>(*) Adjective options have their own single column: all other options are related to verbs</span>
+            </div>
             <div class="table-slider">
-                <input type="range" min="1" max="4" value="1" class="slider" id="slider">
+                <input type="range" min="1" max="5" value="1" class="slider" id="slider">
             </div>
 
         </div>
