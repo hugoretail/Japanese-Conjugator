@@ -138,13 +138,17 @@ header h1 {
 }
 
 #user-guess {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:75%;
     margin:10px;
     text-align: left;
 }
 
 #user-guess input {
     font-size: 24px;
-    width: 300px;
+    width: 100%;
     height: 40px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -268,6 +272,10 @@ input:checked + .slider-switch:before {
 
 .options-table tr:nth-child(even) {
     background-color: #ffffff;
+}
+
+#options-info {
+    display: none;
 }
 
 .table-slider {

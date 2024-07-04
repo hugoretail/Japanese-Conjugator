@@ -4,7 +4,6 @@ console.log(codec.conjugate("むすぶ", "Ta"  , false));
 console.log(codec.conjugateAuxiliaries("たべる", ["Masu"], "Te", "True"));
 
 // constant values
-const inputElement = document.getElementById('guess-input');
 
 // variables
 let verbs = null; // the verbs csv content
@@ -13,15 +12,23 @@ let filters = null;
 let expectedAnswer = null; // the current verb good answer
 
 // elements
+const inputElement = document.getElementById('guess-input');
+const iElement = document.getElementById('iAdj');
+const naElement = document.getElementById('naAdj');
+const negativeElement = document.getElementById('negativeAdj');
+const pastElement = document.getElementById('pastAdj');
+const teElement = document.getElementById('teAdj');
+const adverbialElement = document.getElementById('adverbialAdj');
 
 // functions
 const updateExpectedAnswer = (isVerb) => {
     // UTILISER 'expectedAnswer', on prend toujours expectedAnswer[0] sauf si length > 1 (donc cas particuliers)
     if (isVerb) {
         // TO DO
-        // Vérifier ceci: normalement, 'filters' contient des infos. Si 'Conjugation' == 'Negative', alors il faut prendre la deuxième valeur
+        // Vérifier ceci: normalement, 'filters' contient des infos. Si 'Conjugation' == 'Negative', alors il faut prendre la deuxième valeur [1]
     } else {
         // TO DO
+        // Vérifier aussi: Si 'Conjugation' ==  'ConjunctiveTe', prendre la deuxième valeur [1]
     }
 }
 
@@ -56,7 +63,7 @@ const getAdjective = () => {
     return randomAdjective;
 };
 
-const getFilters = () => {
+const getFilters = (isVerb) => {
     let filters = {
         JLPT: [],
         Conjugation: [],
@@ -65,66 +72,123 @@ const getFilters = () => {
     };
 
     const tableRows = document.querySelectorAll('.options-table tr');
-
-    tableRows.forEach(row => {
-        const checkboxes = row.querySelectorAll('input[type="checkbox"]');
-        
-        checkboxes.forEach(checkbox => {
-            if (checkbox.checked) {
-                const labelText = checkbox.parentNode.textContent.trim();
-
-                if (labelText.includes('N5')
-                    || labelText.includes('N4')
-                    || labelText.includes('N3')
-                    || labelText.includes('N2')
-                    || labelText.includes('N1')
-                    || labelText.includes('Others')) {
-                    filters.JLPT.push(labelText);
-
-                } else if (labelText.includes('Affirmative')
-                    || labelText.includes('Negative')) {
-                    filters.Conjugation.push(labelText);
-
-                } else if (labelText.includes('Past')
-                    || labelText.includes('Present/Future')) {
-                    filters.Conjugation.push(labelText);
-
-                } else if (labelText.includes('Plain')
-                    || labelText.includes('Polite')) {
-                    filters.Auxiliary.push(labelText);
-
-                } else if (labelText.includes('～て')) {
-                    filters.Conjugation.push(labelText);
+    
+    if (isVerb) {
+        tableRows.forEach(row => {
+            const checkboxes = row.querySelectorAll('input[type="checkbox"]');
+            
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    const labelText = checkbox.parentNode.textContent.trim();
+    
+                    if (labelText.includes('N5')
+                        || labelText.includes('N4')
+                        || labelText.includes('N3')
+                        || labelText.includes('N2')
+                        || labelText.includes('N1')
+                        || labelText.includes('Others')) {
+                        filters.JLPT.push(labelText);
+    
+                    } else if (labelText.includes('Affirmative')
+                        || labelText.includes('Negative')) {
+                        filters.Conjugation.push(labelText);
+    
+                    } else if (labelText.includes('Past')
+                        || labelText.includes('Present/Future')) {
+                        filters.Conjugation.push(labelText);
+    
+                    } else if (labelText.includes('Plain')
+                        || labelText.includes('Polite')) {
+                        filters.Auxiliary.push(labelText);
+    
+                    } else if (labelText.includes('～て')) {
+                        filters.Conjugation.push(labelText);
+                    }
                 }
-            }
+            });
         });
-    });
+    } else {
+        tableRows.forEach(row => {
+            const checkboxes = row.querySelectorAll('input[type="checkbox"]');
+            
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    const labelText = checkbox.parentNode.textContent.trim();
+                    
+                    if (labelText.includes('N5')
+                        || labelText.includes('N4')
+                        || labelText.includes('N3')
+                        || labelText.includes('N2')
+                        || labelText.includes('N1')
+                        || labelText.includes('Others')) {
+                        filters.JLPT.push(labelText);
+
+                    }
+                }
+            });
+
+        });
+
+        if (iElement.checked) {
+            filters.Adjective.push('～い');
+        }
+        if (naElement.checked) {
+            filters.Adjective.push('～な');
+        }
+        if (negativeElement.checked) {
+            filters.Conjugation.push('Negative');
+        }
+        if (pastElement.checked) {
+            filters.Conjugation.push('Past');
+        }
+        if (teElement.checked) {
+            filters.Conjugation.push('～て');
+        }
+        if (adverbialElement.checked) {
+            filters.Conjugation.push('Adverbial');
+        }
+    }
 
     return filters;
 };
 
 const updateVerbDisplay = (filters, theVerb) => {
     // TO DO
-
+    // DONT FORGET FURIGANA IF OPTION IS CHECK
 };
 
 const updateAdjectiveDisplay = (filters, theAdjective) => {
     // TO DO
+    // DONT FORGET FURIGANA IF OPTION IS CHECK
 };
 
-const treatConjugation = (choosenConjugation) => {
-    switch (choosenConjugation) {
-        case 'Affirmative':
-            return "Dictionary";
-        case 'Negative':
-            return "Negative";
-        case 'Past':
-            return "Ta";
-        case 'Present/Future':
-            return "Dictionary";
-        case '～て':
-            return "Te";
+const treatConjugation = (choosenConjugation, isVerb) => {
+    if (isVerb) {
+        switch (choosenConjugation) {
+            case 'Affirmative':
+                return "Dictionary";
+            case 'Negative':
+                return "Negative";
+            case 'Past':
+                return "Ta";
+            case 'Present/Future':
+                return "Dictionary";
+            case '～て':
+                return "Te";
+        }
+    } else {
+        switch (choosenConjugation) {
+            case 'Negative':
+                return "Negative";
+            case 'Past':
+                return "Past";
+            case '～て':
+                return "ConjunctiveTe";
+            case 'Adverbial':
+                return "Adverbial";
+        }
     }
+    
 };
 
 const treatAuxiliaries = (choosenAuxiliaries) => {
@@ -137,9 +201,14 @@ const treatAuxiliaries = (choosenAuxiliaries) => {
 };
 
 const newRound = () => {
-    const isVerb = Math.floor(Math.random() * 4)
-    
-    filters = getFilters();
+    let isVerb;
+    if (!iElement.checked && !naElement.checked) {
+        isVerb = true;
+    } else {
+        isVerb = Math.floor(Math.random() * 4) >= 1;
+    }
+
+    filters = getFilters(isVerb);
     console.log(filters);
     
     if (isVerb) {
@@ -149,7 +218,7 @@ const newRound = () => {
         // UTILISER la variable filters
         const randomConjugation = Math.floor(Math.random() * filters["Conjugation"].length);
         let choosenConjugation = filters["Conjugation"][randomConjugation];
-        let treatedConjugation = treatConjugation(choosenConjugation);
+        let treatedConjugation = treatConjugation(choosenConjugation, true);
 
         const randomAuxiliary = Math.floor(Math.random() * filters["Auxiliary"].length);
         let choosenAuxiliaries = [filters["Auxiliary"][randomAuxiliary]];
@@ -185,16 +254,22 @@ const newRound = () => {
         // Adjective 25% chance
         let theChoosenAdjective = getAdjective();
 
-        // TO DO (which conjugation essentially, it's easy now)
+        const randomConjugation = Math.floor(Math.random() * filters["Conjugation"].length);
+        let choosenConjugation = filters["Conjugation"][randomConjugation];
+        let treatedConjugation = treatConjugation(choosenConjugation, false);
+
+        console.log(treatedConjugation);
 
         expectedAnswer = codec.adjConjugate(theChoosenAdjective["Hiragana"],
             treatedConjugation, theChoosenAdjective["iAdjective"]);
 
+        console.log(expectedAnswer);
+        
         updateAdjectiveDisplay(); // TO DO
     }
 
     // store expected answer (hiragana reading)
-    updateExpectedAnswer(isVerb, expectedAnswer);
+    updateExpectedAnswer(isVerb, expectedAnswer); // TO DO
 };
 
 const loadCSV = async (csvFile) => {

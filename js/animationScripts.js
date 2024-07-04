@@ -6,15 +6,18 @@ const sliderElement = document.getElementById('slider');
 const table = document.querySelector('.options-table');
 const totalColumns = table.rows[0].cells.length;
 const checkboxElement = document.querySelector('.switch input[type="checkbox"]');
+const optionsInfoElement = document.getElementById('options-info');
 
 // functions
 const toggleTableAndSlider = () => {
     if (checkboxElement.checked) {
         table.style.display = 'table';
         sliderElement.style.display = 'block';
+        optionsInfoElement.style.display = 'block';
     } else {
         table.style.display = 'none';
         sliderElement.style.display = 'none';
+        optionsInfoElement.style.display = 'none';
     }
 };
 
