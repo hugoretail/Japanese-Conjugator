@@ -2,17 +2,6 @@
 import * as codec from "../node_modules/kamiya-codec/dist/kamiya.min.mjs";
 import { autofurigana } from "./autofurigana.js";
 
-let kanji = "漢字";
-let kana = "かんじ";
-
-let resultPairs = autofurigana(kanji, kana);
-console.log(resultPairs);
-
-/*
-console.log(codec.conjugate("むすぶ", "Ta"  , false));
-console.log(codec.conjugateAuxiliaries("たべる", ["Masu"], "Te", "True"));
-*/
-
 // constant values
 
 // variables
@@ -35,6 +24,8 @@ const timeElement = document.getElementById('time-info');
 const XElement = document.getElementById('X-info');
 const theVerbElement = document.querySelector('#the-verb span');
 const furiganaOptionElement = document.getElementById('display-furigana');
+const JLPTElement = document.getElementById('jlpt-info');
+const JLPTOptionElement = document.getElementById('jlpt-option');
 
 // functions
 const updateExpectedAnswer = (isVerb) => {
@@ -168,6 +159,9 @@ const getFilters = (isVerb) => {
 };
 
 const hideAllProperties = () => {
+    JLPTElement.style.display = 'none';
+    JLPTElement.textContent = '';
+
     styleElement.style.display = 'none';
     styleElement.textContent = '';
 
@@ -182,6 +176,10 @@ const hideAllProperties = () => {
 };
 
 const displayProperties = () => {
+    if (JLPTElement.textContent != '') {
+        JLPTElement.style.display = 'block';
+    }
+
     if (styleElement.textContent != '') {
         styleElement.style.display = 'block';
     }
@@ -196,14 +194,55 @@ const displayProperties = () => {
     }
 };
 
-const updateVerbDisplay = (conjugation, auxiliaries, theVerb) => {
-    // TO DO
-    // DONT FORGET FURIGANA IF OPTION IS CHECK
-    console.log(conjugation);
-    console.log(auxiliaries);
-    console.log(theVerb);
+const updateAdjectiveDisplay = (conjugation, theAdjective) => {
 
     hideAllProperties();
+
+    // JLPT
+    if (JLPTOptionElement.checked) {
+        JLPTElement.textContent = theAdjective.JLPT;
+    }
+
+    // Affirmation (Positive - Negative)
+    if (conjugation.includes('Negative')) {
+        affirmationElement.textContent = "Negative";
+    } else {
+        affirmationElement.textContent = "Positive";
+    }
+
+    // Time (Past - Present/Future)
+    if (conjugation.includes('Past')) {
+        timeElement.textContent = "Past";
+    } else {
+        timeElement.textContent = "Present";
+    }
+
+    // ~X
+    if (conjugation.includes('ConjunctiveTe')) {
+        XElement.textContent = "～て";
+    } else if (conjugation.includes('Adverbial')) {
+        XElement.textContent = "Adverbial";
+    }
+
+    displayProperties(theAdjective);
+
+    // Furigana ?
+    if (furiganaOptionElement.checked) {
+        displayWithFurigana(theAdjective);
+    } else {
+        theVerbElement.textContent = theAdjective.Dictionary;
+    }
+
+};
+
+const updateVerbDisplay = (conjugation, auxiliaries, theVerb) => {
+    
+    hideAllProperties();
+
+    // JLPT
+    if (JLPTOptionElement.checked) {
+        JLPTElement.textContent = theVerb.JLPT;
+    }
 
     // Style (Plain - Polite - Honorific)
     if (conjugation === 'Dictionary' && !auxiliaries.includes('Masu')) {
@@ -248,11 +287,7 @@ const displayWithFurigana = (text) => {
     let kana = text.Hiragana;
 
     let furigana = autofurigana(kanji, kana);
-    console.log(furigana);
 
-    // theVerbElement.innerHTML = `<ruby>${theVerb.Dictionary}<rt>${theVerb.Hiragana}</rt></ruby>`;
-
-    // TO DO
     let theHTML = '';
     furigana.forEach(elt => {
         if (elt[1] != null) {
@@ -264,11 +299,6 @@ const displayWithFurigana = (text) => {
     });
 
     theVerbElement.innerHTML = `${theHTML}`;
-};
-
-const updateAdjectiveDisplay = (filters, theAdjective) => {
-    // TO DO
-    // DONT FORGET FURIGANA IF OPTION IS CHECK
 };
 
 const treatConjugation = (choosenConjugation, isVerb) => {
@@ -373,7 +403,7 @@ const newRound = () => {
 
         console.log("The good answer : ", expectedAnswer);
         
-        updateAdjectiveDisplay(); // TO DO
+        updateAdjectiveDisplay(treatedConjugation, theChoosenAdjective);
     }
 
     // store expected answer (hiragana reading)

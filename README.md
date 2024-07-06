@@ -1,3 +1,3 @@
 hello
 
-ty : https://github.com/zacharied/autofurigana
+thanks to : https://github.com/zacharied/autofurigana
