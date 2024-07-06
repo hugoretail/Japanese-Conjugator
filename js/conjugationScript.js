@@ -1,7 +1,17 @@
+// imports
 import * as codec from "../node_modules/kamiya-codec/dist/kamiya.min.mjs";
+import { autofurigana } from "./autofurigana.js";
 
+let kanji = "漢字";
+let kana = "かんじ";
+
+let resultPairs = autofurigana(kanji, kana);
+console.log(resultPairs);
+
+/*
 console.log(codec.conjugate("むすぶ", "Ta"  , false));
 console.log(codec.conjugateAuxiliaries("たべる", ["Masu"], "Te", "True"));
+*/
 
 // constant values
 
@@ -19,6 +29,12 @@ const negativeElement = document.getElementById('negativeAdj');
 const pastElement = document.getElementById('pastAdj');
 const teElement = document.getElementById('teAdj');
 const adverbialElement = document.getElementById('adverbialAdj');
+const styleElement = document.getElementById('style-info');
+const affirmationElement = document.getElementById('affirmation-info');
+const timeElement = document.getElementById('time-info');
+const XElement = document.getElementById('X-info');
+const theVerbElement = document.querySelector('#the-verb span');
+const furiganaOptionElement = document.getElementById('display-furigana');
 
 // functions
 const updateExpectedAnswer = (isVerb) => {
@@ -59,7 +75,6 @@ const getAdjective = () => {
         randomAdjective = filteredAdjectives[randomIndex];
     }
 
-    console.log("Selected adjective: ", randomAdjective);
     return randomAdjective;
 };
 
@@ -152,9 +167,103 @@ const getFilters = (isVerb) => {
     return filters;
 };
 
-const updateVerbDisplay = (filters, theVerb) => {
+const hideAllProperties = () => {
+    styleElement.style.display = 'none';
+    styleElement.textContent = '';
+
+    affirmationElement.style.display = 'none';
+    affirmationElement.textContent = '';
+
+    timeElement.style.display = 'none';
+    timeElement.textContent = '';
+
+    XElement.style.display = 'none';
+    XElement.textContent = '';
+};
+
+const displayProperties = () => {
+    if (styleElement.textContent != '') {
+        styleElement.style.display = 'block';
+    }
+    if (affirmationElement.textContent != '') {
+        affirmationElement.style.display = 'block';
+    }
+    if (timeElement.textContent != '') {
+        timeElement.style.display = 'block';
+    }
+    if (XElement.textContent != '') {
+        XElement.style.display = 'block';
+    }
+};
+
+const updateVerbDisplay = (conjugation, auxiliaries, theVerb) => {
     // TO DO
     // DONT FORGET FURIGANA IF OPTION IS CHECK
+    console.log(conjugation);
+    console.log(auxiliaries);
+    console.log(theVerb);
+
+    hideAllProperties();
+
+    // Style (Plain - Polite - Honorific)
+    if (conjugation === 'Dictionary' && !auxiliaries.includes('Masu')) {
+        styleElement.textContent = "Plain";
+    } else if (auxiliaries.includes('Masu')) {
+        styleElement.textContent = "Polite";
+    } else {
+        styleElement.textContent = "Plain";
+    }
+
+    // Affirmation (Positive - Negative)
+    if (conjugation.includes('Negative')) {
+        affirmationElement.textContent = "Negative";
+    } else {
+        affirmationElement.textContent = "Affirmative";
+    }
+
+    // Time (Past - Present/Future - Progressive)
+    if (conjugation.includes('Ta')) {
+        timeElement.textContent = "Past";
+    } else {
+        timeElement.textContent = "Present";
+    }
+
+    // ~X
+    if (conjugation.includes('Te')) {
+        XElement.textContent = "～て";
+    }
+
+    displayProperties(theVerb);
+
+    // Furigana ?
+    if (furiganaOptionElement.checked) {
+        displayWithFurigana(theVerb);
+    } else {
+        theVerbElement.textContent = theVerb.Dictionary;
+    }
+};
+
+const displayWithFurigana = (text) => {
+    let kanji = text.Dictionary;
+    let kana = text.Hiragana;
+
+    let furigana = autofurigana(kanji, kana);
+    console.log(furigana);
+
+    // theVerbElement.innerHTML = `<ruby>${theVerb.Dictionary}<rt>${theVerb.Hiragana}</rt></ruby>`;
+
+    // TO DO
+    let theHTML = '';
+    furigana.forEach(elt => {
+        if (elt[1] != null) {
+            theHTML += '<ruby>' + elt[0] + '<rt>' + elt[1] + '</rt></ruby>';
+        } else {
+            theHTML += elt[0];
+        }
+        
+    });
+
+    theVerbElement.innerHTML = `${theHTML}`;
 };
 
 const updateAdjectiveDisplay = (filters, theAdjective) => {
@@ -239,16 +348,15 @@ const newRound = () => {
             treatedAuxiliaries.push("Masu");
         }
 
-        console.log("The verb: ", theChoosenVerb);
-        console.log("The conjugation: ", treatedConjugation);
-        console.log("The auxiliary(-ies): ", treatedAuxiliaries);
+        console.log("The conjugation : ", treatedConjugation);
+        console.log("The auxiliary(-ies) :", treatedAuxiliaries);
 
-        console.log(theChoosenVerb["Hiragana"]);
         expectedAnswer = codec.conjugateAuxiliaries(theChoosenVerb["Hiragana"],
             treatedAuxiliaries, treatedConjugation, theChoosenVerb["typeII"]); // conjugate
-        console.log(expectedAnswer);
 
-        updateVerbDisplay(); // TO DO
+        console.log("The good answer : ", expectedAnswer);
+
+        updateVerbDisplay(treatedConjugation, treatedAuxiliaries, theChoosenVerb);
 
     } else {
         // Adjective 25% chance
@@ -258,12 +366,12 @@ const newRound = () => {
         let choosenConjugation = filters["Conjugation"][randomConjugation];
         let treatedConjugation = treatConjugation(choosenConjugation, false);
 
-        console.log(treatedConjugation);
+        console.log("The conjugation : ", treatedConjugation);
 
         expectedAnswer = codec.adjConjugate(theChoosenAdjective["Hiragana"],
             treatedConjugation, theChoosenAdjective["iAdjective"]);
 
-        console.log(expectedAnswer);
+        console.log("The good answer : ", expectedAnswer);
         
         updateAdjectiveDisplay(); // TO DO
     }
@@ -302,14 +410,11 @@ const parseCSV = (csvData) => {
 
 // events
 document.addEventListener("DOMContentLoaded", async (event) => {
-    console.log("Page loaded.");
 
     // Get the csv values
     verbs = await loadCSV('../csv/verbs.csv');
-    console.log("Verbs loaded: ", verbs);
 
     adjectives = await loadCSV('../csv/adjectives.csv');
-    console.log("Adjectives loaded: ", adjectives);
 
     newRound();
 });

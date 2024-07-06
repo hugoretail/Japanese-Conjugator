@@ -40,10 +40,10 @@
             </div>
             <div id="verb-conjugation">
                 <div id="verb-properties">
-                    <span data-tooltip="Plain ー Polite ー Honorific">Style</span>
-                    <span data-tooltip="Affirmative ー Negative">Affirmation</span>
-                    <span data-tooltip="Past ー Present/Future ー Progressive">Time</span>
-                    <span data-tooltip="～て ー ～たら ー ～しまう ー ...">～X</span>
+                    <span data-tooltip="Plain ー Polite ー Honorific" id="style-info">Style</span>
+                    <span data-tooltip="Affirmative ー Negative" id="affirmation-info">Affirmation</span>
+                    <span data-tooltip="Past ー Present/Future ー Progressive" id="time-info">Time</span>
+                    <span data-tooltip="～て ー ～たら ー ～しまう ー ..." id="X-info">～X</span>
                 </div>
                 <div id="the-verb">
                     <span>動詞</span>
@@ -84,7 +84,7 @@
                         <td><input type="checkbox" disabled> Conditional</td>
                         <td><input type="checkbox" checked disabled> Plain</td>
                         <td><input type="checkbox" disabled> Imperative</td>
-                        <td><input type="checkbox" checked> Furigana</td>
+                        <td><input type="checkbox" id="display-furigana" checked> Furigana</td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" checked> N4</td>
@@ -94,7 +94,7 @@
                         <td><input type="checkbox" disabled> Volitional</td>
                         <td><input type="checkbox" checked> Polite</td>
                         <td><input type="checkbox" disabled> Causative</td>
-                        <td><input type="checkbox" disabled> </td>
+                        <td><input type="checkbox" disabled> JLPT</td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" disabled> N3</td>

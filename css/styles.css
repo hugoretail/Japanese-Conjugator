@@ -1,3 +1,13 @@
+::selection {
+    background-color: rgb(188, 0, 45);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: rgb(188, 0, 45);
+    color: white;
+}
+
 /** BODY **/
 
 body {
