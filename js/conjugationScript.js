@@ -2,6 +2,9 @@
 import * as codec from "../node_modules/kamiya-codec/dist/kamiya.min.mjs";
 import { autofurigana } from "./autofurigana.js";
 
+console.log(codec.conjugate('やる', 'Ta',false));
+console.log(codec.adjConjugate('たいせつ','Negative',false));
+
 // constant values
 
 // variables
@@ -348,7 +351,7 @@ const newRound = () => {
     }
 
     filters = getFilters(isVerb);
-    console.log(filters);
+    console.log("Les filtres utilisés :", filters);
     
     if (isVerb) {
         // Verb 75% chance
@@ -378,8 +381,18 @@ const newRound = () => {
             treatedAuxiliaries.push("Masu");
         }
 
-        console.log("The conjugation : ", treatedConjugation);
-        console.log("The auxiliary(-ies) :", treatedAuxiliaries);
+        // typeII ?
+        let typeII;
+        if (theChoosenVerb["typeII"] == 'false') {
+            typeII = false;
+        } else {
+            typeII = true;
+        }
+
+        console.log("The verb :", theChoosenVerb);
+        console.log("The auxiliaries :", treatedAuxiliaries);
+        console.log("The conjugation :", treatedConjugation);
+        console.log("The verb type :", typeII);
 
         expectedAnswer = codec.conjugateAuxiliaries(theChoosenVerb["Hiragana"],
             treatedAuxiliaries, treatedConjugation, theChoosenVerb["typeII"]); // conjugate
@@ -396,10 +409,20 @@ const newRound = () => {
         let choosenConjugation = filters["Conjugation"][randomConjugation];
         let treatedConjugation = treatConjugation(choosenConjugation, false);
 
-        console.log("The conjugation : ", treatedConjugation);
+        // い or な
+        let iAdj;
+        if (theChoosenAdjective["iAdjective"] == 'false') {
+            iAdj = false;
+        } else {
+            iAdj = true;
+        }
 
+        console.log("The adjective :", theChoosenAdjective);
+        console.log("The conjugation :", treatedConjugation);
+        console.log("The adjective type :", iAdj);
+        
         expectedAnswer = codec.adjConjugate(theChoosenAdjective["Hiragana"],
-            treatedConjugation, theChoosenAdjective["iAdjective"]);
+            treatedConjugation, iAdj);
 
         console.log("The good answer : ", expectedAnswer);
         

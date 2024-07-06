@@ -60,7 +60,7 @@ Index,Dictionary,Hiragana,JLPT,typeII
 59,寝る,ねる,N5,true
 60,登る,のぼる,N5,true
 61,飲む,のむ,N5,true
-62,乗る,のる,N5,true
+62,乗る,のる,N5,false
 63,脱ぐ,ぬぐ,N5,true
 64,覚える,おぼえる,N5,true
 65,起きる,おきる,N5,true
@@ -89,7 +89,6 @@ Index,Dictionary,Hiragana,JLPT,typeII
 89,撮る,とる,N5,true
 90,疲れる,つかれる,N5,true
 91,使う,つかう,N5,true
-92,つける,つける,N5,true
 93,付ける,つける,N5,true
 94,着く,つく,N5,true
 95,作る,つくる,N5,true
@@ -101,7 +100,7 @@ Index,Dictionary,Hiragana,JLPT,typeII
 101,忘れる,わすれる,N5,true
 102,渡る,わたる,N5,true
 103,渡す,わたす,N5,true
-104,やる,やる,N5,true
+104,やる,やる,N5,false
 105,休む,やすむ,N5,true
 106,呼ぶ,よぶ,N5,true
 107,読む,よむ,N5,true
