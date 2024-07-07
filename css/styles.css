@@ -143,7 +143,7 @@ header h1 {
 }
 
 #the-verb span {
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -170,13 +170,31 @@ header h1 {
     color: #999;
 }
 
+#notification {
+    display: none;
+    position: absolute;
+    background-color: rgba(188, 0, 45, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
 #conjugation-result {
     width:50%;
     text-align: center;
-    visibility: visible; /* By default, has to be hidden */
+    visibility: hidden; /* By default, has to be hidden */
     background-color: #c3e6cb; /* Wrong answer: #ecbdc9 | Right answer : #c3e6cb  */
     box-shadow: 0px 0px 5px #218838; /* Wrong answer: #bc002d | Right answer : #218838 */
     padding: 5px 15px;
+}
+
+#conjugation-result :nth-child(2) {
+    margin-top: 10px;
+    color: #555;
 }
 
 #options {
@@ -372,6 +390,49 @@ footer nav ul li a {
 
 footer nav ul li a:hover {
     color: #BC002D;
+}
+
+/** BURGER MENU **/
+
+.menu-burger {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.menu-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-content h3 {
+    margin-top: 0;
+}
+
+.menu-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-content ul li {
+    margin-bottom: 10px;
+}
+
+.menu-content ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
 }
 
 /** REPONSIVE **/

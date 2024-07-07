@@ -2,16 +2,18 @@
 import * as codec from "../node_modules/kamiya-codec/dist/kamiya.min.mjs";
 import { autofurigana } from "./autofurigana.js";
 
-console.log(codec.conjugate('やる', 'Ta',false));
-console.log(codec.adjConjugate('たいせつ','Negative',false));
-
 // constant values
 
 // variables
 let verbs = null; // the verbs csv content
 let adjectives = null; // the adjectives csv content
 let filters = null;
-let expectedAnswer = null; // the current verb good answer
+let expectedAnswer = null; // the current verb good answer, not treated so might contain junk elements
+let treatedExpectedAnswer = null; // contains one or multiple correct answers
+let state = "guessing";
+let verbHistory = [];
+let adjHistory = [];
+let cpt = 0;
 
 // elements
 const inputElement = document.getElementById('guess-input');
@@ -29,16 +31,102 @@ const theVerbElement = document.querySelector('#the-verb span');
 const furiganaOptionElement = document.getElementById('display-furigana');
 const JLPTElement = document.getElementById('jlpt-info');
 const JLPTOptionElement = document.getElementById('jlpt-option');
+const notification = document.getElementById('notification');
+const conjugationResultElement = document.getElementById('conjugation-result');
+const conjugationResultParagraphElement = document.querySelector('#conjugation-result p');
 
 // functions
-const updateExpectedAnswer = (isVerb) => {
-    // UTILISER 'expectedAnswer', on prend toujours expectedAnswer[0] sauf si length > 1 (donc cas particuliers)
-    if (isVerb) {
-        // TO DO
-        // Vérifier ceci: normalement, 'filters' contient des infos. Si 'Conjugation' == 'Negative', alors il faut prendre la deuxième valeur [1]
+const addToVerbHistory = (verb, conjugation, auxiliaries) => {
+    const verbEntry = {
+        verb: verb,
+        conjugation: conjugation,
+        auxiliaries: auxiliaries
+    };
+
+    verbHistory.push(verbEntry);
+};
+
+const addToAjdHistory = (adj, conjugation) => {
+    const adjEntry = {
+        adj: adj,
+        conjugation: conjugation,
+    };
+
+    adjHistory.push(adjEntry);
+};
+
+const treatAnswer = (text) => {
+    conjugationResultElement.style.visibility = "visible";
+    if (treatedExpectedAnswer.includes(text)) {
+        conjugationResultElement.style.backgroundColor = "#c3e6cb";
+        conjugationResultElement.style.boxShadow = "0px 0px 5px #218838";
+        conjugationResultParagraphElement.textContent = "Good Job!";
     } else {
-        // TO DO
-        // Vérifier aussi: Si 'Conjugation' ==  'ConjunctiveTe', prendre la deuxième valeur [1]
+        conjugationResultElement.style.backgroundColor = "#ecbdc9";
+        conjugationResultElement.style.boxShadow = "0px 0px 5px #bc002d";
+        if (treatedExpectedAnswer.length === 1) {
+            conjugationResultParagraphElement.textContent = `Wrong answer. The correct one was: ${treatedExpectedAnswer[0]}`;
+        } else if (treatedExpectedAnswer.length > 1) {
+            conjugationResultParagraphElement.textContent = `Wrong answer. The possible answers were: ${treatedExpectedAnswer.join(', ')}`;
+        }
+    }
+    inputElement.disabled = true;
+    state = "waiting";
+    cpt += 1;
+};
+
+const containsRomajiOrKatakana = (text) => {
+    return Array.from(text).some(char => wanakana.isRomaji(char) || wanakana.isKatakana(char));
+};
+
+const showNotification = (text) => {
+    notification.textContent = text;
+    const inputRect = inputElement.getBoundingClientRect();
+    notification.style.display = 'block';
+    notification.style.top = `${inputRect.top - notification.offsetHeight - 10}px`;
+    notification.style.left = `${inputRect.left}px`;
+
+    void notification.offsetWidth;
+    notification.style.opacity = 1;
+
+    setTimeout(() => {
+        notification.style.opacity = 0;
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 500);
+    }, 2000);
+};
+
+const updateExpectedAnswer = (isVerb, expectedAnswer, treatedConjugation, treatedAuxiliaries = null) => {
+    if (expectedAnswer.length == 0) {
+        newRound();
+    } else if (isVerb) {
+        if (expectedAnswer.length == 1) {
+            treatedExpectedAnswer = [expectedAnswer[0]];
+        } else {
+            if (treatedConjugation.includes("Negative") && treatedAuxiliaries.includes("Masu")) {
+                treatedExpectedAnswer = [expectedAnswer[0]];
+            } else if (treatedConjugation.includes("Negative")) {
+                treatedExpectedAnswer = [expectedAnswer[1]];
+            }
+        }
+    } else {
+        if (expectedAnswer.length == 1) {
+            treatedExpectedAnswer = [expectedAnswer[0]];
+        } else {
+            if (treatedConjugation.includes("Negative")) {
+                treatedExpectedAnswer = [expectedAnswer[0],expectedAnswer[1],expectedAnswer[2]];
+            } else if (treatedConjugation.includes("ConjunctiveTe")) {
+                treatedExpectedAnswer = [expectedAnswer[1]];
+            } else if (treatedConjugation.includes("Past")) {
+                treatedExpectedAnswer = [expectedAnswer[0]];
+            }
+        }
+    }
+
+    // secure if null
+    if (treatedExpectedAnswer == null) {
+        newRound();
     }
 }
 
@@ -351,7 +439,6 @@ const newRound = () => {
     }
 
     filters = getFilters(isVerb);
-    console.log("Les filtres utilisés :", filters);
     
     if (isVerb) {
         // Verb 75% chance
@@ -362,6 +449,7 @@ const newRound = () => {
         let choosenConjugation = filters["Conjugation"][randomConjugation];
         let treatedConjugation = treatConjugation(choosenConjugation, true);
 
+        // only one can be selected right now : CAN BE CHANGED
         const randomAuxiliary = Math.floor(Math.random() * filters["Auxiliary"].length);
         let choosenAuxiliaries = [filters["Auxiliary"][randomAuxiliary]];
 
@@ -389,17 +477,12 @@ const newRound = () => {
             typeII = true;
         }
 
-        console.log("The verb :", theChoosenVerb);
-        console.log("The auxiliaries :", treatedAuxiliaries);
-        console.log("The conjugation :", treatedConjugation);
-        console.log("The verb type :", typeII);
-
         expectedAnswer = codec.conjugateAuxiliaries(theChoosenVerb["Hiragana"],
-            treatedAuxiliaries, treatedConjugation, theChoosenVerb["typeII"]); // conjugate
-
-        console.log("The good answer : ", expectedAnswer);
+            treatedAuxiliaries, treatedConjugation, typeII); // conjugate
 
         updateVerbDisplay(treatedConjugation, treatedAuxiliaries, theChoosenVerb);
+        updateExpectedAnswer(isVerb, expectedAnswer, treatedConjugation, treatedAuxiliaries);
+        addToVerbHistory(theChoosenVerb, treatedConjugation, treatedAuxiliaries);
 
     } else {
         // Adjective 25% chance
@@ -416,21 +499,18 @@ const newRound = () => {
         } else {
             iAdj = true;
         }
-
-        console.log("The adjective :", theChoosenAdjective);
-        console.log("The conjugation :", treatedConjugation);
-        console.log("The adjective type :", iAdj);
         
         expectedAnswer = codec.adjConjugate(theChoosenAdjective["Hiragana"],
             treatedConjugation, iAdj);
-
-        console.log("The good answer : ", expectedAnswer);
         
         updateAdjectiveDisplay(treatedConjugation, theChoosenAdjective);
+        updateExpectedAnswer(isVerb, expectedAnswer, treatedConjugation);
+        addToAjdHistory(theChoosenAdjective, treatedConjugation);
     }
 
-    // store expected answer (hiragana reading)
-    updateExpectedAnswer(isVerb, expectedAnswer); // TO DO
+    console.log("Current verb history :",verbHistory);
+    console.log("Current adj history :",adjHistory);
+
 };
 
 const loadCSV = async (csvFile) => {
@@ -472,12 +552,33 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     newRound();
 });
 
-inputElement.addEventListener('keydown', (event) => {
+document.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
-        if (inputElement.value.trim() === '') {
-            console.log('vide'); // TO DO
-        } else {
-            console.log('pas vide'); // TO DO
+        if (state === "waiting") {
+            cpt += 1;
+        }
+        if (state === "waiting" && cpt == 3) {
+            state = "guessing";
+            conjugationResultElement.style.visibility = "hidden";
+            inputElement.value = "";
+            inputElement.disabled = false;
+            inputElement.focus();
+            cpt = 0;
+            newRound();
+        }
+    }
+});
+
+inputElement.addEventListener('keydown', (event) => {
+    let text = inputElement.value.trim();
+    if (event.key === 'Enter') {
+        if (text === '') {
+            showNotification("Please write something first.");
+        } else if (containsRomajiOrKatakana(text)) {
+            showNotification("Hiragana only.");
+        }
+        else {
+            treatAnswer(text);
         }
     }
 });

@@ -7,6 +7,7 @@ const table = document.querySelector('.options-table');
 const totalColumns = table.rows[0].cells.length;
 const checkboxElement = document.querySelector('.switch input[type="checkbox"]');
 const optionsInfoElement = document.getElementById('options-info');
+const titleElement = document.getElementById('webTitle');
 
 // functions
 const toggleTableAndSlider = () => {
@@ -54,4 +55,8 @@ sliderElement.addEventListener('input', () => {
             }
         }
     }, optionsScrollTransition);
+});
+
+titleElement.addEventListener('click', () => {
+    location.reload();
 });
