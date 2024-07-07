@@ -8,8 +8,21 @@ const totalColumns = table.rows[0].cells.length;
 const checkboxElement = document.querySelector('.switch input[type="checkbox"]');
 const optionsInfoElement = document.getElementById('options-info');
 const titleElement = document.getElementById('webTitle');
+const aboutLinkElement = document.getElementById('aboutLink');
+const closeAboutElement = document.getElementById('closeAbout');
+const aboutLightboxElement = document.getElementById('aboutLightbox');
+const contactLinkElement = document.querySelector('a[href="mailto:hugo.retaill@gmail.com"]');
+const githubLinkElement = document.querySelector('a[href="https://github.com/Hugo445nights/Japanese-Conjugator"]');
 
 // functions
+function showAboutLightbox() {
+    aboutLightboxElement.style.display = 'block';
+}
+
+function closeAboutLightbox() {
+    aboutLightboxElement.style.display = 'none';
+}
+
 const toggleTableAndSlider = () => {
     if (checkboxElement.checked) {
         table.style.display = 'table';
@@ -59,4 +72,27 @@ sliderElement.addEventListener('input', () => {
 
 titleElement.addEventListener('click', () => {
     location.reload();
+});
+
+aboutLinkElement.addEventListener('click', (event) => {
+    event.preventDefault();
+    showAboutLightbox();
+});
+
+closeAboutElement.addEventListener('click', (event) => {
+    closeAboutLightbox();
+});
+
+contactLinkElement.addEventListener('click', (event) => {
+    const confirmation = confirm("Are you sure you want to open your messaging application?");
+    if (!confirmation) {
+        event.preventDefault();
+    }
+});
+
+githubLinkElement.addEventListener('click', (event) => {
+    const confirmation = confirm("Are you sure you want to open the GitHub page?");
+    if (!confirmation) {
+        event.preventDefault();
+    }
 });

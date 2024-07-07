@@ -1,3 +1,8 @@
 hello
 
 thanks to : https://github.com/zacharied/autofurigana
+
+left to do :
+    - avoid getting the same verb+conjugation+auxiliaires (or adj+conjugation) using the history
+    - display the verb/adj history through a burger menu
+    - display the daily kanji through a burger menu

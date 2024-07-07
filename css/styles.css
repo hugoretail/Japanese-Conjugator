@@ -392,6 +392,53 @@ footer nav ul li a:hover {
     color: #BC002D;
 }
 
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    z-index: 9999;
+}
+
+.lightbox-content {
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.lightbox-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.lightbox-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.lightbox-content button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.lightbox-content button:hover {
+    background-color: #0056b3;
+}
+
 /** BURGER MENU **/
 
 .menu-burger {
