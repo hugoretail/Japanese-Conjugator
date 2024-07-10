@@ -131,8 +131,22 @@ const updateExpectedAnswer = (isVerb, expectedAnswer, treatedConjugation, treate
 }
 
 const getVerb = () => {
+    /*
     // get all verbs from the concerned JLPT levels
     const filteredVerbs = verbs.filter(verb => filters.JLPT.includes(verb.JLPT));
+
+    // get a random verb
+    let randomVerb = null;
+    let randomIndex = null;
+    while (randomVerb == null || randomVerb == 'None') {
+        randomIndex = Math.floor(Math.random() * filteredVerbs.length);
+        randomVerb = filteredVerbs[randomIndex];
+    }
+
+    return randomVerb;
+    */
+    // get all verbs from the concerned JLPT levels
+    const filteredVerbs = window.verbs.filter(verb => filters.JLPT.includes(verb.JLPT));
 
     // get a random verb
     let randomVerb = null;
@@ -146,8 +160,22 @@ const getVerb = () => {
 };
 
 const getAdjective = () => {
+    /*
     // get all adjectives from the concerned JLPT levels
     const filteredAdjectives = adjectives.filter(adjective => filters.JLPT.includes(adjective.JLPT));
+
+    // get a random adjective
+    let randomAdjective = null;
+    let randomIndex = null;
+    while (randomAdjective == null || randomAdjective == 'None') {
+        randomIndex = Math.floor(Math.random() * filteredAdjectives.length);
+        randomAdjective = filteredAdjectives[randomIndex];
+    }
+
+    return randomAdjective;
+    */
+    // get all adjectives from the concerned JLPT levels
+    const filteredAdjectives = window.adjectives.filter(adjective => filters.JLPT.includes(adjective.JLPT));
 
     // get a random adjective
     let randomAdjective = null;
@@ -513,6 +541,19 @@ const newRound = () => {
 
 };
 
+const loadJSON = async (jsonFile) => {
+    try {
+        const response = await fetch(jsonFile);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch ${jsonFile}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error(`Error fetching ${jsonFile}:`, error);
+        return null;
+    }
+};
+
 const loadCSV = async (csvFile) => {
     try {
         const response = await fetch(csvFile);
@@ -543,6 +584,7 @@ const parseCSV = (csvData) => {
 
 // events
 document.addEventListener("DOMContentLoaded", async (event) => {
+    /*
     try {
         verbs = await loadCSV('../csv/verbs.csv');
         adjectives = await loadCSV('../csv/adjectives.csv');
@@ -554,6 +596,22 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         newRound();
     } catch (error) {
         console.error('Error loading CSV files:', error);
+        // Handle error: Show user a message or retry loading
+    }
+    */
+    try {
+        const verbs = await loadJSON('../json/verbs.json');
+        const adjectives = await loadJSON('../json/adjectives.json');
+        
+        if (!verbs || !adjectives) {
+            throw new Error('Failed to load JSON files');
+        }
+        window.verbs = verbs;
+        window.adjectives = adjectives;
+        
+        newRound();
+    } catch (error) {
+        console.error('Error loading JSON files:', error);
         // Handle error: Show user a message or retry loading
     }
 });

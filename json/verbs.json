@@ -1,0 +1,1808 @@
+[
+  {
+    "Index": 1,
+    "Dictionary": "浴びる",
+    "Hiragana": "あびる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 2,
+    "Dictionary": "上げる",
+    "Hiragana": "あげる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 3,
+    "Dictionary": "開ける",
+    "Hiragana": "あける",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 4,
+    "Dictionary": "開く",
+    "Hiragana": "あく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 5,
+    "Dictionary": "洗う",
+    "Hiragana": "あらう",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 6,
+    "Dictionary": "ある",
+    "Hiragana": "ある",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 7,
+    "Dictionary": "歩く",
+    "Hiragana": "あるく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 8,
+    "Dictionary": "遊ぶ",
+    "Hiragana": "あそぶ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 9,
+    "Dictionary": "会う",
+    "Hiragana": "あう",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 10,
+    "Dictionary": "違う",
+    "Hiragana": "ちがう",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 11,
+    "Dictionary": "出す",
+    "Hiragana": "だす",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 12,
+    "Dictionary": "出かける",
+    "Hiragana": "でかける",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 13,
+    "Dictionary": "出る",
+    "Hiragana": "でる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 14,
+    "Dictionary": "吹く",
+    "Hiragana": "ふく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 15,
+    "Dictionary": "降る",
+    "Hiragana": "ふる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 16,
+    "Dictionary": "入る",
+    "Hiragana": "はいる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 17,
+    "Dictionary": "始まる",
+    "Hiragana": "はじまる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 18,
+    "Dictionary": "履く",
+    "Hiragana": "はく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 19,
+    "Dictionary": "話す",
+    "Hiragana": "はなす",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 20,
+    "Dictionary": "晴れる",
+    "Hiragana": "はれる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 21,
+    "Dictionary": "貼る",
+    "Hiragana": "はる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 22,
+    "Dictionary": "走る",
+    "Hiragana": "はしる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 23,
+    "Dictionary": "働く",
+    "Hiragana": "はたらく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 24,
+    "Dictionary": "引く",
+    "Hiragana": "ひく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 25,
+    "Dictionary": "弾く",
+    "Hiragana": "ひく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 26,
+    "Dictionary": "行く",
+    "Hiragana": "いく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 27,
+    "Dictionary": "入れる",
+    "Hiragana": "いれる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 28,
+    "Dictionary": "要る",
+    "Hiragana": "いる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 29,
+    "Dictionary": "居る",
+    "Hiragana": "いる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 30,
+    "Dictionary": "言う",
+    "Hiragana": "いう",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 31,
+    "Dictionary": "帰る",
+    "Hiragana": "かえる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 32,
+    "Dictionary": "返す",
+    "Hiragana": "かえす",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 33,
+    "Dictionary": "掛かる",
+    "Hiragana": "かかる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 34,
+    "Dictionary": "掛ける",
+    "Hiragana": "かける",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 35,
+    "Dictionary": "書く",
+    "Hiragana": "かく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 36,
+    "Dictionary": "借りる",
+    "Hiragana": "かりる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 37,
+    "Dictionary": "貸す",
+    "Hiragana": "かす",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 38,
+    "Dictionary": "買う",
+    "Hiragana": "かう",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 39,
+    "Dictionary": "消す",
+    "Hiragana": "けす",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 40,
+    "Dictionary": "消える",
+    "Hiragana": "きえる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 41,
+    "Dictionary": "聞く",
+    "Hiragana": "きく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 42,
+    "Dictionary": "切る",
+    "Hiragana": "きる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 43,
+    "Dictionary": "着る",
+    "Hiragana": "きる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 44,
+    "Dictionary": "困る",
+    "Hiragana": "こまる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 45,
+    "Dictionary": "答える",
+    "Hiragana": "こたえる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 46,
+    "Dictionary": "曇る",
+    "Hiragana": "くもる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 47,
+    "Dictionary": "来る",
+    "Hiragana": "くる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 48,
+    "Dictionary": "曲がる",
+    "Hiragana": "まがる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 49,
+    "Dictionary": "待つ",
+    "Hiragana": "まつ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 50,
+    "Dictionary": "磨く",
+    "Hiragana": "みがく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 51,
+    "Dictionary": "見る",
+    "Hiragana": "みる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 52,
+    "Dictionary": "見せる",
+    "Hiragana": "みせる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 53,
+    "Dictionary": "持つ",
+    "Hiragana": "もつ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 54,
+    "Dictionary": "鳴く",
+    "Hiragana": "なく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 55,
+    "Dictionary": "無くす",
+    "Hiragana": "なくす",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 56,
+    "Dictionary": "並べる",
+    "Hiragana": "ならべる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 57,
+    "Dictionary": "並ぶ",
+    "Hiragana": "ならぶ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 58,
+    "Dictionary": "習う",
+    "Hiragana": "ならう",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 59,
+    "Dictionary": "寝る",
+    "Hiragana": "ねる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 60,
+    "Dictionary": "登る",
+    "Hiragana": "のぼる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 61,
+    "Dictionary": "飲む",
+    "Hiragana": "のむ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 62,
+    "Dictionary": "乗る",
+    "Hiragana": "のる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 63,
+    "Dictionary": "脱ぐ",
+    "Hiragana": "ぬぐ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 64,
+    "Dictionary": "覚える",
+    "Hiragana": "おぼえる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 65,
+    "Dictionary": "起きる",
+    "Hiragana": "おきる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 66,
+    "Dictionary": "置く",
+    "Hiragana": "おく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 67,
+    "Dictionary": "降りる",
+    "Hiragana": "おりる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 68,
+    "Dictionary": "教える",
+    "Hiragana": "おしえる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 69,
+    "Dictionary": "押す",
+    "Hiragana": "おす",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 70,
+    "Dictionary": "終わる",
+    "Hiragana": "おわる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 71,
+    "Dictionary": "泳ぐ",
+    "Hiragana": "およぐ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 72,
+    "Dictionary": "咲く",
+    "Hiragana": "さく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 74,
+    "Dictionary": "差す",
+    "Hiragana": "さす",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 75,
+    "Dictionary": "閉まる",
+    "Hiragana": "しまる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 76,
+    "Dictionary": "閉める",
+    "Hiragana": "しめる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 77,
+    "Dictionary": "締める",
+    "Hiragana": "しめる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 78,
+    "Dictionary": "死ぬ",
+    "Hiragana": "しぬ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 79,
+    "Dictionary": "知る",
+    "Hiragana": "しる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 80,
+    "Dictionary": "住む",
+    "Hiragana": "すむ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 81,
+    "Dictionary": "吸う",
+    "Hiragana": "すう",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 82,
+    "Dictionary": "座る",
+    "Hiragana": "すわる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 83,
+    "Dictionary": "食べる",
+    "Hiragana": "たべる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 84,
+    "Dictionary": "頼む",
+    "Hiragana": "たのむ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 85,
+    "Dictionary": "立つ",
+    "Hiragana": "たつ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 86,
+    "Dictionary": "飛ぶ",
+    "Hiragana": "とぶ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 87,
+    "Dictionary": "止まる",
+    "Hiragana": "とまる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 88,
+    "Dictionary": "取る",
+    "Hiragana": "とる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 89,
+    "Dictionary": "撮る",
+    "Hiragana": "とる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 90,
+    "Dictionary": "疲れる",
+    "Hiragana": "つかれる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 91,
+    "Dictionary": "使う",
+    "Hiragana": "つかう",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 93,
+    "Dictionary": "付ける",
+    "Hiragana": "つける",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 94,
+    "Dictionary": "着く",
+    "Hiragana": "つく",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 95,
+    "Dictionary": "作る",
+    "Hiragana": "つくる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 96,
+    "Dictionary": "勤める",
+    "Hiragana": "つとめる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 97,
+    "Dictionary": "生まれる",
+    "Hiragana": "うまれる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 98,
+    "Dictionary": "売る",
+    "Hiragana": "うる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 99,
+    "Dictionary": "歌う",
+    "Hiragana": "うたう",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 100,
+    "Dictionary": "分かる",
+    "Hiragana": "わかる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 101,
+    "Dictionary": "忘れる",
+    "Hiragana": "わすれる",
+    "JLPT": "N5",
+    "typeII": true
+  },
+  {
+    "Index": 102,
+    "Dictionary": "渡る",
+    "Hiragana": "わたる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 103,
+    "Dictionary": "渡す",
+    "Hiragana": "わたす",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 104,
+    "Dictionary": "やる",
+    "Hiragana": "やる",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 105,
+    "Dictionary": "休む",
+    "Hiragana": "やすむ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 106,
+    "Dictionary": "呼ぶ",
+    "Hiragana": "よぶ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 107,
+    "Dictionary": "読む",
+    "Hiragana": "よむ",
+    "JLPT": "N5",
+    "typeII": false
+  },
+  {
+    "Index": 108,
+    "Dictionary": "上がる",
+    "Hiragana": "あがる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 109,
+    "Dictionary": "集まる",
+    "Hiragana": "あつまる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 110,
+    "Dictionary": "集める",
+    "Hiragana": "あつめる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 111,
+    "Dictionary": "謝る",
+    "Hiragana": "あやまる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 112,
+    "Dictionary": "選ぶ",
+    "Hiragana": "えらぶ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 113,
+    "Dictionary": "増える",
+    "Hiragana": "ふえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 114,
+    "Dictionary": "踏む",
+    "Hiragana": "ふむ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 115,
+    "Dictionary": "降り出す",
+    "Hiragana": "ふりだす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 116,
+    "Dictionary": "太る",
+    "Hiragana": "ふとる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 117,
+    "Dictionary": "原因をつける",
+    "Hiragana": "げんいんをつける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 119,
+    "Dictionary": "ご覧になる",
+    "Hiragana": "ごらんになる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 120,
+    "Dictionary": "運ぶ",
+    "Hiragana": "はこぶ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 121,
+    "Dictionary": "払う",
+    "Hiragana": "はらう",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 122,
+    "Dictionary": "冷える",
+    "Hiragana": "ひえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 123,
+    "Dictionary": "光る",
+    "Hiragana": "ひかる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 124,
+    "Dictionary": "引き出す",
+    "Hiragana": "ひきだす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 125,
+    "Dictionary": "引っ越す",
+    "Hiragana": "ひっこす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 126,
+    "Dictionary": "開ける",
+    "Hiragana": "あける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 127,
+    "Dictionary": "拾う",
+    "Hiragana": "ひろう",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 128,
+    "Dictionary": "褒める",
+    "Hiragana": "ほめる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 129,
+    "Dictionary": "いじめる",
+    "Hiragana": "いじめる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 130,
+    "Dictionary": "意見を述べる",
+    "Hiragana": "いけんをのべる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 131,
+    "Dictionary": "生きる",
+    "Hiragana": "いきる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 132,
+    "Dictionary": "祈る",
+    "Hiragana": "いのる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 133,
+    "Dictionary": "急ぐ",
+    "Hiragana": "いそぐ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 134,
+    "Dictionary": "頂く",
+    "Hiragana": "いただく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 135,
+    "Dictionary": "致す",
+    "Hiragana": "いたす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 136,
+    "Dictionary": "変える",
+    "Hiragana": "かえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 137,
+    "Dictionary": "会議を開く",
+    "Hiragana": "かいぎをひらく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 139,
+    "Dictionary": "構う",
+    "Hiragana": "かまう",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 140,
+    "Dictionary": "噛む",
+    "Hiragana": "かむ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 141,
+    "Dictionary": "考える",
+    "Hiragana": "かんがえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 143,
+    "Dictionary": "片付ける",
+    "Hiragana": "かたづける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 144,
+    "Dictionary": "勝つ",
+    "Hiragana": "かつ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 145,
+    "Dictionary": "乾く",
+    "Hiragana": "かわく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 146,
+    "Dictionary": "変わる",
+    "Hiragana": "かわる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 147,
+    "Dictionary": "通る",
+    "Hiragana": "とおる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 148,
+    "Dictionary": "飾る",
+    "Hiragana": "かざる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 149,
+    "Dictionary": "怪我をする",
+    "Hiragana": "けがをする",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 150,
+    "Dictionary": "聞こえる",
+    "Hiragana": "きこえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 151,
+    "Dictionary": "決まる",
+    "Hiragana": "きまる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 152,
+    "Dictionary": "決める",
+    "Hiragana": "きめる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 153,
+    "Dictionary": "込む",
+    "Hiragana": "こむ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 154,
+    "Dictionary": "講義を聞く",
+    "Hiragana": "こうぎをきく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 155,
+    "Dictionary": "壊れる",
+    "Hiragana": "こわれる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 156,
+    "Dictionary": "壊す",
+    "Hiragana": "こわす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 157,
+    "Dictionary": "下さる",
+    "Hiragana": "くださる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 158,
+    "Dictionary": "比べる",
+    "Hiragana": "くらべる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 159,
+    "Dictionary": "暮れる",
+    "Hiragana": "くれる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 160,
+    "Dictionary": "教育を受ける",
+    "Hiragana": "きょういくをうける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 161,
+    "Dictionary": "間違える",
+    "Hiragana": "まちがえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 162,
+    "Dictionary": "参る",
+    "Hiragana": "まいる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 163,
+    "Dictionary": "負ける",
+    "Hiragana": "まける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 164,
+    "Dictionary": "間に合う",
+    "Hiragana": "まにあう",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 165,
+    "Dictionary": "回る",
+    "Hiragana": "まわる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 166,
+    "Dictionary": "召し上がる",
+    "Hiragana": "めしあがる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 167,
+    "Dictionary": "見える",
+    "Hiragana": "みえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 168,
+    "Dictionary": "見つかる",
+    "Hiragana": "みつかる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 169,
+    "Dictionary": "見つける",
+    "Hiragana": "みつける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 170,
+    "Dictionary": "戻る",
+    "Hiragana": "もどる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 171,
+    "Dictionary": "申し上げる",
+    "Hiragana": "もうしあげる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 172,
+    "Dictionary": "申す",
+    "Hiragana": "もうす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 173,
+    "Dictionary": "迎える",
+    "Hiragana": "むかえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 174,
+    "Dictionary": "向かう",
+    "Hiragana": "むかう",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 175,
+    "Dictionary": "投げる",
+    "Hiragana": "なげる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 176,
+    "Dictionary": "泣く",
+    "Hiragana": "なく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 177,
+    "Dictionary": "無くなる",
+    "Hiragana": "なくなる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 178,
+    "Dictionary": "亡くなる",
+    "Hiragana": "なくなる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 179,
+    "Dictionary": "直る",
+    "Hiragana": "なおる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 180,
+    "Dictionary": "治る",
+    "Hiragana": "なおる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 181,
+    "Dictionary": "慣れる",
+    "Hiragana": "なれる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 182,
+    "Dictionary": "鳴る",
+    "Hiragana": "なる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 183,
+    "Dictionary": "眠る",
+    "Hiragana": "ねむる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 184,
+    "Dictionary": "逃げる",
+    "Hiragana": "にげる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 185,
+    "Dictionary": "似る",
+    "Hiragana": "にる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 186,
+    "Dictionary": "残る",
+    "Hiragana": "のこる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 187,
+    "Dictionary": "乗り換える",
+    "Hiragana": "のりかえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 188,
+    "Dictionary": "濡れる",
+    "Hiragana": "ぬれる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 189,
+    "Dictionary": "塗る",
+    "Hiragana": "ぬる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 190,
+    "Dictionary": "盗む",
+    "Hiragana": "ぬすむ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 191,
+    "Dictionary": "落ちる",
+    "Hiragana": "おちる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 192,
+    "Dictionary": "驚く",
+    "Hiragana": "おどろく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 193,
+    "Dictionary": "踊る",
+    "Hiragana": "おどる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 194,
+    "Dictionary": "お出でになる",
+    "Hiragana": "おいでになる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 195,
+    "Dictionary": "行く",
+    "Hiragana": "いく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 196,
+    "Dictionary": "怒る",
+    "Hiragana": "おこる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 197,
+    "Dictionary": "起こす",
+    "Hiragana": "おこす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 198,
+    "Dictionary": "遅れる",
+    "Hiragana": "おくれる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 199,
+    "Dictionary": "送る",
+    "Hiragana": "おくる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 200,
+    "Dictionary": "思い出す",
+    "Hiragana": "おもいだす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 201,
+    "Dictionary": "折れる",
+    "Hiragana": "おれる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 202,
+    "Dictionary": "下りる",
+    "Hiragana": "おりる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 203,
+    "Dictionary": "折る",
+    "Hiragana": "おる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 204,
+    "Dictionary": "仰る",
+    "Hiragana": "おっしゃる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 205,
+    "Dictionary": "落とす",
+    "Hiragana": "おとす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 206,
+    "Dictionary": "下がる",
+    "Hiragana": "さがる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 207,
+    "Dictionary": "探す",
+    "Hiragana": "さがす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 208,
+    "Dictionary": "下げる",
+    "Hiragana": "さげる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 209,
+    "Dictionary": "差し上げる",
+    "Hiragana": "さしあげる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 210,
+    "Dictionary": "騒ぐ",
+    "Hiragana": "さわぐ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 211,
+    "Dictionary": "触る",
+    "Hiragana": "さわる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 212,
+    "Dictionary": "叱る",
+    "Hiragana": "しかる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 213,
+    "Dictionary": "調べる",
+    "Hiragana": "しらべる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 214,
+    "Dictionary": "知らせる",
+    "Hiragana": "しらせる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 215,
+    "Dictionary": "生じる",
+    "Hiragana": "しょうじる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 216,
+    "Dictionary": "育てる",
+    "Hiragana": "そだてる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 217,
+    "Dictionary": "滑る",
+    "Hiragana": "すべる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 218,
+    "Dictionary": "空く",
+    "Hiragana": "すく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 219,
+    "Dictionary": "済む",
+    "Hiragana": "すむ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 220,
+    "Dictionary": "進む",
+    "Hiragana": "すすむ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 221,
+    "Dictionary": "捨てる",
+    "Hiragana": "すてる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 222,
+    "Dictionary": "倒れる",
+    "Hiragana": "たおれる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 223,
+    "Dictionary": "足りる",
+    "Hiragana": "たりる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 224,
+    "Dictionary": "足す",
+    "Hiragana": "たす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 225,
+    "Dictionary": "建てる",
+    "Hiragana": "たてる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 226,
+    "Dictionary": "尋ねる",
+    "Hiragana": "たずねる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 227,
+    "Dictionary": "訪ねる",
+    "Hiragana": "たずねる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 228,
+    "Dictionary": "手伝う",
+    "Hiragana": "てつだう",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 229,
+    "Dictionary": "届ける",
+    "Hiragana": "とどける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 230,
+    "Dictionary": "泊まる",
+    "Hiragana": "とまる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 231,
+    "Dictionary": "止める",
+    "Hiragana": "とめる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 232,
+    "Dictionary": "通る",
+    "Hiragana": "とおる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 233,
+    "Dictionary": "取り替える",
+    "Hiragana": "とりかえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 234,
+    "Dictionary": "続ける",
+    "Hiragana": "つづける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 235,
+    "Dictionary": "続く",
+    "Hiragana": "つづく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 236,
+    "Dictionary": "捕まえる",
+    "Hiragana": "つかまえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 237,
+    "Dictionary": "漬ける",
+    "Hiragana": "つける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 238,
+    "Dictionary": "付く",
+    "Hiragana": "つく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 239,
+    "Dictionary": "連れる",
+    "Hiragana": "つれる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 240,
+    "Dictionary": "釣る",
+    "Hiragana": "つる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 241,
+    "Dictionary": "伝える",
+    "Hiragana": "つたえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 242,
+    "Dictionary": "包む",
+    "Hiragana": "つつむ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 243,
+    "Dictionary": "植える",
+    "Hiragana": "うえる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 244,
+    "Dictionary": "動く",
+    "Hiragana": "うごく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 245,
+    "Dictionary": "伺う",
+    "Hiragana": "うかがう",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 246,
+    "Dictionary": "受ける",
+    "Hiragana": "うける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 247,
+    "Dictionary": "打つ",
+    "Hiragana": "うつ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 248,
+    "Dictionary": "移る",
+    "Hiragana": "うつる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 249,
+    "Dictionary": "写す",
+    "Hiragana": "うつす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 250,
+    "Dictionary": "別れる",
+    "Hiragana": "わかれる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 251,
+    "Dictionary": "沸かす",
+    "Hiragana": "わかす",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 252,
+    "Dictionary": "沸く",
+    "Hiragana": "わく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 253,
+    "Dictionary": "笑う",
+    "Hiragana": "わらう",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 254,
+    "Dictionary": "割れる",
+    "Hiragana": "われる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 255,
+    "Dictionary": "焼ける",
+    "Hiragana": "やける",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 256,
+    "Dictionary": "焼く",
+    "Hiragana": "やく",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 257,
+    "Dictionary": "役に立つ",
+    "Hiragana": "やくにたつ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 258,
+    "Dictionary": "止む",
+    "Hiragana": "やむ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 259,
+    "Dictionary": "痩せる",
+    "Hiragana": "やせる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 260,
+    "Dictionary": "汚れる",
+    "Hiragana": "よごれる",
+    "JLPT": "N4",
+    "typeII": true
+  },
+  {
+    "Index": 261,
+    "Dictionary": "喜ぶ",
+    "Hiragana": "よろこぶ",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 262,
+    "Dictionary": "寄る",
+    "Hiragana": "よる",
+    "JLPT": "N4",
+    "typeII": false
+  },
+  {
+    "Index": 263,
+    "Dictionary": "揺れる",
+    "Hiragana": "ゆれる",
+    "JLPT": "N4",
+    "typeII": true
+  }
+]

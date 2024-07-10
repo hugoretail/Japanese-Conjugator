@@ -1,0 +1,835 @@
+[
+  {
+    "Index": 1,
+    "Dictionary": "危ない",
+    "Hiragana": "あぶない",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 2,
+    "Dictionary": "赤い",
+    "Hiragana": "あかい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 3,
+    "Dictionary": "明るい",
+    "Hiragana": "あかるい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 4,
+    "Dictionary": "甘い",
+    "Hiragana": "あまい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 5,
+    "Dictionary": "青い",
+    "Hiragana": "あおい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 6,
+    "Dictionary": "新しい",
+    "Hiragana": "あたらしい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 7,
+    "Dictionary": "暖かい",
+    "Hiragana": "あたたかい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 8,
+    "Dictionary": "熱い",
+    "Hiragana": "あつい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 9,
+    "Dictionary": "厚い",
+    "Hiragana": "あつい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 10,
+    "Dictionary": "暑い",
+    "Hiragana": "あつい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 11,
+    "Dictionary": "便利",
+    "Hiragana": "べんり",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 12,
+    "Dictionary": "小さい",
+    "Hiragana": "ちいさい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 13,
+    "Dictionary": "近い",
+    "Hiragana": "ちかい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 14,
+    "Dictionary": "大丈夫",
+    "Hiragana": "だいじょうぶ",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 15,
+    "Dictionary": "大好き",
+    "Hiragana": "だいすき",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 16,
+    "Dictionary": "古い",
+    "Hiragana": "ふるい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 17,
+    "Dictionary": "太い",
+    "Hiragana": "ふとい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 18,
+    "Dictionary": "元気",
+    "Hiragana": "げんき",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 19,
+    "Dictionary": "速い",
+    "Hiragana": "はやい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 20,
+    "Dictionary": "早い",
+    "Hiragana": "はやい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 21,
+    "Dictionary": "下手",
+    "Hiragana": "へた",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 22,
+    "Dictionary": "低い",
+    "Hiragana": "ひくい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 23,
+    "Dictionary": "暇",
+    "Hiragana": "ひま",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 24,
+    "Dictionary": "広い",
+    "Hiragana": "ひろい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 25,
+    "Dictionary": "本当",
+    "Hiragana": "ほんとう",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 26,
+    "Dictionary": "欲しい",
+    "Hiragana": "ほしい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 27,
+    "Dictionary": "細い",
+    "Hiragana": "ほそい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 28,
+    "Dictionary": "色々",
+    "Hiragana": "いろいろ",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 29,
+    "Dictionary": "忙しい",
+    "Hiragana": "いそがしい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 30,
+    "Dictionary": "痛い",
+    "Hiragana": "いたい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 31,
+    "Dictionary": "嫌",
+    "Hiragana": "いや",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 32,
+    "Dictionary": "丈夫",
+    "Hiragana": "じょうぶ",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 33,
+    "Dictionary": "上手",
+    "Hiragana": "じょうず",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 34,
+    "Dictionary": "辛い",
+    "Hiragana": "つらい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 35,
+    "Dictionary": "軽い",
+    "Hiragana": "かるい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 36,
+    "Dictionary": "可愛い",
+    "Hiragana": "かわいい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 37,
+    "Dictionary": "結構",
+    "Hiragana": "けっこう",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 38,
+    "Dictionary": "黄色い",
+    "Hiragana": "きいろい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 39,
+    "Dictionary": "嫌い",
+    "Hiragana": "きらい",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 40,
+    "Dictionary": "綺麗",
+    "Hiragana": "きれい",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 41,
+    "Dictionary": "汚い",
+    "Hiragana": "きたない",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 42,
+    "Dictionary": "暗い",
+    "Hiragana": "くらい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 43,
+    "Dictionary": "黒い",
+    "Hiragana": "くろい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 44,
+    "Dictionary": "丸い",
+    "Hiragana": "まるい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 45,
+    "Dictionary": "真っ直ぐ",
+    "Hiragana": "まっすぐ",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 46,
+    "Dictionary": "不味い",
+    "Hiragana": "まずい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 47,
+    "Dictionary": "短い",
+    "Hiragana": "みじかい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 48,
+    "Dictionary": "難しい",
+    "Hiragana": "むずかしい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 49,
+    "Dictionary": "長い",
+    "Hiragana": "ながい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 50,
+    "Dictionary": "賑やか",
+    "Hiragana": "にぎやか",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 51,
+    "Dictionary": "温い",
+    "Hiragana": "ぬるい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 52,
+    "Dictionary": "美味しい",
+    "Hiragana": "おいしい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 53,
+    "Dictionary": "重い",
+    "Hiragana": "おもい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 54,
+    "Dictionary": "面白い",
+    "Hiragana": "おもしろい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 55,
+    "Dictionary": "多い",
+    "Hiragana": "おおい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 56,
+    "Dictionary": "大きい",
+    "Hiragana": "おおきい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 57,
+    "Dictionary": "遅い",
+    "Hiragana": "おそい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 58,
+    "Dictionary": "立派",
+    "Hiragana": "りっぱ",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 59,
+    "Dictionary": "寒い",
+    "Hiragana": "さむい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 60,
+    "Dictionary": "狭い",
+    "Hiragana": "せまい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 61,
+    "Dictionary": "白い",
+    "Hiragana": "しろい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 62,
+    "Dictionary": "静か",
+    "Hiragana": "しずか",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 63,
+    "Dictionary": "好き",
+    "Hiragana": "すき",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 64,
+    "Dictionary": "少ない",
+    "Hiragana": "すくない",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 65,
+    "Dictionary": "涼しい",
+    "Hiragana": "すずしい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 66,
+    "Dictionary": "多分",
+    "Hiragana": "たぶん",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 67,
+    "Dictionary": "大変",
+    "Hiragana": "たいへん",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 68,
+    "Dictionary": "大切",
+    "Hiragana": "たいせつ",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 69,
+    "Dictionary": "高い",
+    "Hiragana": "たかい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 70,
+    "Dictionary": "沢山",
+    "Hiragana": "たくさん",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 71,
+    "Dictionary": "楽しい",
+    "Hiragana": "たのしい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 72,
+    "Dictionary": "遠い",
+    "Hiragana": "とおい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 73,
+    "Dictionary": "詰まらない",
+    "Hiragana": "つまらない",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 74,
+    "Dictionary": "冷たい",
+    "Hiragana": "つめたい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 75,
+    "Dictionary": "強い",
+    "Hiragana": "つよい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 76,
+    "Dictionary": "煩い",
+    "Hiragana": "うるさい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 77,
+    "Dictionary": "薄い",
+    "Hiragana": "うすい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 78,
+    "Dictionary": "若い",
+    "Hiragana": "わかい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 79,
+    "Dictionary": "悪い",
+    "Hiragana": "わるい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 80,
+    "Dictionary": "易しい",
+    "Hiragana": "やさしい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 81,
+    "Dictionary": "安い",
+    "Hiragana": "やすい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 82,
+    "Dictionary": "良い",
+    "Hiragana": "いい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 83,
+    "Dictionary": "弱い",
+    "Hiragana": "よわい",
+    "JLPT": "N5",
+    "iAdjective": true
+  },
+  {
+    "Index": 84,
+    "Dictionary": "有名",
+    "Hiragana": "ゆうめい",
+    "JLPT": "N5",
+    "iAdjective": false
+  },
+  {
+    "Index": 85,
+    "Dictionary": "安心",
+    "Hiragana": "あんしん",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 86,
+    "Dictionary": "安全",
+    "Hiragana": "あんぜん",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 87,
+    "Dictionary": "浅い",
+    "Hiragana": "あさい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 88,
+    "Dictionary": "大事",
+    "Hiragana": "だいじ",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 89,
+    "Dictionary": "不便",
+    "Hiragana": "ふべん",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 90,
+    "Dictionary": "深い",
+    "Hiragana": "ふかい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 91,
+    "Dictionary": "複雑",
+    "Hiragana": "ふくざつ",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 92,
+    "Dictionary": "反対",
+    "Hiragana": "はんたい",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 93,
+    "Dictionary": "恥ずかしい",
+    "Hiragana": "はずかしい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 94,
+    "Dictionary": "変",
+    "Hiragana": "へん",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 95,
+    "Dictionary": "酷い",
+    "Hiragana": "ひどい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 96,
+    "Dictionary": "久しぶり",
+    "Hiragana": "ひさしぶり",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 97,
+    "Dictionary": "一杯",
+    "Hiragana": "いっぱい",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 98,
+    "Dictionary": "一生懸命",
+    "Hiragana": "いっしょうけんめい",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 99,
+    "Dictionary": "自由",
+    "Hiragana": "じゆう",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 100,
+    "Dictionary": "十分",
+    "Hiragana": "じゅうぶん",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 101,
+    "Dictionary": "悲しい",
+    "Hiragana": "かなしい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 102,
+    "Dictionary": "簡単",
+    "Hiragana": "かんたん",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 103,
+    "Dictionary": "硬い",
+    "Hiragana": "かたい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 104,
+    "Dictionary": "厳しい",
+    "Hiragana": "きびしい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 105,
+    "Dictionary": "危険",
+    "Hiragana": "きけん",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 106,
+    "Dictionary": "細かい",
+    "Hiragana": "こまかい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 107,
+    "Dictionary": "怖い",
+    "Hiragana": "こわい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 108,
+    "Dictionary": "急",
+    "Hiragana": "きゅう",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 109,
+    "Dictionary": "珍しい",
+    "Hiragana": "めずらしい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 110,
+    "Dictionary": "無理",
+    "Hiragana": "むり",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 111,
+    "Dictionary": "眠い",
+    "Hiragana": "ねむい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 112,
+    "Dictionary": "苦い",
+    "Hiragana": "にがい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 113,
+    "Dictionary": "可笑しい",
+    "Hiragana": "おかしい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 114,
+    "Dictionary": "寂しい",
+    "Hiragana": "さびしい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 115,
+    "Dictionary": "盛ん",
+    "Hiragana": "さかん",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 116,
+    "Dictionary": "親切",
+    "Hiragana": "しんせつ",
+    "JLPT": "N4",
+    "iAdjective": false
+  },
+  {
+    "Index": 117,
+    "Dictionary": "素晴らしい",
+    "Hiragana": "すばらしい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 118,
+    "Dictionary": "凄い",
+    "Hiragana": "すごい",
+    "JLPT": "N4",
+    "iAdjective": true
+  },
+  {
+    "Index": 119,
+    "Dictionary": "正しい",
+    "Hiragana": "ただしい",
+    "JLPT": "N4",
+    "iAdjective": true
+  }
+]
