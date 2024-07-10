@@ -543,13 +543,19 @@ const parseCSV = (csvData) => {
 
 // events
 document.addEventListener("DOMContentLoaded", async (event) => {
-
-    // Get the csv values
-    verbs = await loadCSV('../csv/verbs.csv');
-
-    adjectives = await loadCSV('../csv/adjectives.csv');
-
-    newRound();
+    try {
+        verbs = await loadCSV('../csv/verbs.csv');
+        adjectives = await loadCSV('../csv/adjectives.csv');
+        
+        if (!verbs || !adjectives) {
+            throw new Error('Failed to load CSV files');
+        }
+        
+        newRound();
+    } catch (error) {
+        console.error('Error loading CSV files:', error);
+        // Handle error: Show user a message or retry loading
+    }
 });
 
 document.addEventListener('keydown', (event) => {
