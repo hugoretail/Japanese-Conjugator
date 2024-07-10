@@ -1,6 +1,6 @@
 // imports
-import * as codec from "../node_modules/kamiya-codec/dist/kamiya.min.mjs";
 import { autofurigana } from "./autofurigana.js";
+import * as codec from "./kamiya.min.js";
 
 // constant values
 
