@@ -3,6 +3,8 @@ import { autofurigana } from "./autofurigana.js";
 import * as codec from "./kamiya.min.js";
 
 // constant values
+const verbsURL = 'https://raw.githubusercontent.com/Hugo445nights/Japanese-Conjugator/main/csv/verbs.csv';
+const adjectivesURL = 'https://raw.githubusercontent.com/Hugo445nights/Japanese-Conjugator/main/csv/adjectives.csv';
 
 // variables
 let verbs = null; // the verbs csv content
@@ -131,7 +133,7 @@ const updateExpectedAnswer = (isVerb, expectedAnswer, treatedConjugation, treate
 }
 
 const getVerb = () => {
-    /*
+    
     // get all verbs from the concerned JLPT levels
     const filteredVerbs = verbs.filter(verb => filters.JLPT.includes(verb.JLPT));
 
@@ -144,7 +146,9 @@ const getVerb = () => {
     }
 
     return randomVerb;
-    */
+    
+
+    /*
     // get all verbs from the concerned JLPT levels
     const filteredVerbs = window.verbs.filter(verb => filters.JLPT.includes(verb.JLPT));
 
@@ -157,10 +161,11 @@ const getVerb = () => {
     }
 
     return randomVerb;
+    */
 };
 
 const getAdjective = () => {
-    /*
+    
     // get all adjectives from the concerned JLPT levels
     const filteredAdjectives = adjectives.filter(adjective => filters.JLPT.includes(adjective.JLPT));
 
@@ -173,7 +178,9 @@ const getAdjective = () => {
     }
 
     return randomAdjective;
-    */
+    
+
+    /*
     // get all adjectives from the concerned JLPT levels
     const filteredAdjectives = window.adjectives.filter(adjective => filters.JLPT.includes(adjective.JLPT));
 
@@ -186,6 +193,7 @@ const getAdjective = () => {
     }
 
     return randomAdjective;
+    */
 };
 
 const getFilters = (isVerb) => {
@@ -499,7 +507,7 @@ const newRound = () => {
 
         // typeII ?
         let typeII;
-        if (theChoosenVerb["typeII"] == 'false') {
+        if (theChoosenVerb["typeII"] === 'false') {
             typeII = false;
         } else {
             typeII = true;
@@ -522,7 +530,7 @@ const newRound = () => {
 
         // い or な
         let iAdj;
-        if (theChoosenAdjective["iAdjective"] == 'false') {
+        if (theChoosenAdjective["iAdjective"] === 'false') {
             iAdj = false;
         } else {
             iAdj = true;
@@ -584,21 +592,14 @@ const parseCSV = (csvData) => {
 
 // events
 document.addEventListener("DOMContentLoaded", async (event) => {
+
+    verbs = await loadCSV(verbsURL);
+    adjectives = await loadCSV(adjectivesURL);
+
+        
+    newRound();
+    
     /*
-    try {
-        verbs = await loadCSV('../csv/verbs.csv');
-        adjectives = await loadCSV('../csv/adjectives.csv');
-        
-        if (!verbs || !adjectives) {
-            throw new Error('Failed to load CSV files');
-        }
-        
-        newRound();
-    } catch (error) {
-        console.error('Error loading CSV files:', error);
-        // Handle error: Show user a message or retry loading
-    }
-    */
     try {
         const verbs = await loadJSON('../json/verbs.json');
         const adjectives = await loadJSON('../json/adjectives.json');
@@ -614,6 +615,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         console.error('Error loading JSON files:', error);
         // Handle error: Show user a message or retry loading
     }
+    */
 });
 
 document.addEventListener('keydown', (event) => {
