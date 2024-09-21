@@ -28,6 +28,7 @@ header > div {
 }
 
 .burger-menu {
+    visibility: hidden;
     text-align: center;
     margin:25px;
     margin-bottom: 10px;
