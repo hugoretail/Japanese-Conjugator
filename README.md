@@ -4,7 +4,7 @@
 
 This is a short projet to help you in your japanese conjugation study.
 
-## Table des matières
+## Time Table
 - [Installation](#installation)
 - [Usage](#usage)
 - [Thanks](#thanks)
