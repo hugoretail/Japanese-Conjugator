@@ -16,6 +16,9 @@ Download and open the project folder with Live Server on VSCode (or another live
 
 ## Usage
 
+The website application is live using GitHub Pages : [Click Here](https://hugoretail.github.io/Japanese-Conjugator/)
+
+If you want to use the code : 
 Write the first conjugation, the next one, and the next...
 You're good to go!
 
